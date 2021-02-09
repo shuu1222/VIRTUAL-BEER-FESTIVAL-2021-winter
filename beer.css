@@ -25,17 +25,18 @@ color: #fff;
   margin-right: 30px;
 }
 .beer-image{
-  width: 15%;
+  width: 10%;
   height: auto;
   object-fit: contain;
+  margin-right: 3%;
 }
 .beer-description-wrapper{
   display: inline-flex;
 }
 .beer-description{
-  width: 49%;
+  width: 56%;
   color: black;
-  margin-left: 1%;
+  margin-left: 3%;
   font-family: 'Noto Sans JP', sans-serif !important;
 }
 .beer-description-title{
@@ -43,7 +44,7 @@ color: #fff;
   text-align: center;
 }
 .beer-chart-wrapper{
-  width: 35%;
+  width: 30%;
 }
 
 .ipa{
@@ -53,7 +54,7 @@ background-color: #3cb371;
   word-break: break-all;
 }
 .beer-food{
-  margin-top: 10px;
+  margin-top: auto;
   font-size:medium;
   color: #696969;
 }
