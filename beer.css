@@ -42,19 +42,29 @@ color: #fff;
 .beer-description-title{
   font-size: large;
   text-align: center;
+  margin-bottom: 15px;
 }
 .beer-chart-wrapper{
   width: 30%;
 }
 
-.ipa{
-background-color: #3cb371;
-}
 .beer-description-text{
   word-break: break-all;
 }
 .beer-food{
-  margin-top: auto;
+  margin-top: 15px;
   font-size:medium;
   color: #696969;
+}
+.beer-chart-canvas{
+  display: inline-block;
+}
+.ipa{
+background-color: #3cb371;
+}
+.belgian-white{
+background-color: #9e9478;
+}
+.pilsner{
+background-color: #d6d300;
 }

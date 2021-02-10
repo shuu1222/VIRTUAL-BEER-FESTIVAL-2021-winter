@@ -48,21 +48,21 @@
 	<div id="wrapper">
 		<section id="main">
 			<section class="content">
-				<h3 class="heading test-title">おすすめビール</h3>
+				<h3 class="heading">おすすめビール</h3>
 				<article class="post">
 					<div class="beer-title-wrapper">
 						<titles class="beer-title">PUNK IPA</titles>
 						<button class="beer-tag ipa">IPA</button>
 						<span class="beer-purchase">
 							購入場所：<a
-								href="https://www.amazon.co.jp/dp/B073ZQWRS/ref=cm_sw_r_tw_dp_tRg8Fb8R0ANAA?_x_encoding=UTF8&psc=1">アマゾン</a>
+								href="https://www.amazon.co.jp/dp/B073ZQWRS/ref=cm_sw_r_tw_dp_tRg8Fb8R0ANAA?_x_encoding=UTF8&psc=1" target=”_blank”>アマゾン</a>
 						</span>
 					</div>
 					<div class="beer-description-wrapper">
 						<img src="images/banners/punkipa.png" alt="" class="beer-image" />
-						<!-- パンクIPAのグラフ -->
 						<div class="beer-chart-wrapper">
-							<canvas id="punkIPA"></canvas>
+							<!-- パンクIPAのグラフ -->
+							<canvas class='beer-chart-canvas' id="punkIPA"></canvas>
 						</div>
 						<div class="beer-description">
 							<p class="beer-description-title">
@@ -84,36 +84,81 @@
 						</div>
 
 					</div>
-					<h3>COEDO</h3>
-					<h4><img src="images/banners/koedo.png" alt="" width="260" height="113" class="alignleft" />
-						購入場所　<a href="https://webshop-coedobrewery.com/">COEDO Online Shop</a><Br>
-						ビールとは本来、色、香り、味わい、のど越しに様々な特徴をもつ表情豊かなもの。<Br>
-						COEDOでは薩摩芋からつくった世界にも類のない紅赤色の“ジャパニーズ”ビールから、<Br>
-						黄金色のスタンダードであるピルスナーまで幅広いビールの世界と楽しみを味わえます。<Br>
-						<br>
-						COEDOは日本の色名を冠する6つのビールを作っています。<Br>
-						毬花 -Marihana-は淡い黄金色と純白の泡にシトラスを想わせるアロマホップが華やかに香るセッション・IPA。<Br>
-						瑠璃 -Ruri-はクリアな黄金色と白く柔らかな泡のコントラスト、さわやかな飲み口が特徴のプレミアムピルスナービール。<Br>
-						白 -Shiro-は無濾過ビールならではの明るくなめらかな白濁色が特徴の小麦のビール。<Br>
-						伽羅 -Kyara-は鮮やかで綺麗な苦味とともに白葡萄やスパイシーな柑橘を感じさせるアロマホップが広がるインディア・ペール・ラガー。<Br>
-						漆黒 -Shikkoku-は艶やかな黒色と茶白色の細やかな泡立ちのコントラストが冴える長期熟成ビール。<Br>
-						紅赤 -Beniaka-は赤みがかった琥珀色と香ばしい甘味が特徴のプレミアムエール。<Br>
-						<br>
-						あなたお好みの一つを見つけられること、間違いなし。
-					</h4><br clear="all" />
-					<h3>クローネンブルグ1664ブラン</h3>
-					<h4><img src="images/banners/1664.png" alt="" class="alignright" />
-						購入場所　<a href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS">アマゾン</a><Br>
-						ほのかに甘い柑橘系の風味で、苦味が弱く飲みやすい白ビールテイスト。<Br>
-						サッポロビールより発売されている世界の大手ビール会社カールスバーグ社のブランドです。<Br>
-						味わいは、ほのかに甘い柑橘系の風味で、苦味が弱く飲みやすいのが特長です。<Br>
-						<br>
-						柑橘系で苦みの少ない味わいのため、白ワインのようにシーフードやサラダ・フルーツとの相性が良く、マリアージュをお楽しみいただけます。<Br>
-						ボトルデザインも洗練されており、是非コレクションの一つとしても並べておきたい一本です。<Br>
-						美食学、ファッション、芸術の国フランスならではの丹念に仕上げた豊かな味わい、是非この機会にいかがえしょうか。<Br>
-					</h4><br clear="all" />
-				</article>
-			</section>
+
+
+					<div class="beer-title-wrapper">
+						<titles class="beer-title">COEDO 瑠璃</titles>
+						<button class="beer-tag pilsner">Pilsner</button>
+						<span class="beer-purchase">
+							購入場所：<a
+								href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS" target=”_blank”>アマゾン</a>
+						</span>
+					</div>
+					<div class="beer-description-wrapper">
+						<img src="images/banners/koedo.png" alt="COEDO 瑠璃の写真" class="beer-image" />
+						<div class="beer-chart-wrapper">
+							<canvas class='beer-chart-canvas' id="ruri"></canvas>
+						</div>
+					
+						<div class="beer-description">
+							<p class="beer-description-title">
+								小江戸川越で生まれたプレミアムピルスナー
+								『瑠璃』
+							</p>
+							<p class="beer-description-text">
+								軽やかな口当たりながらも、深みある味わいとホップの香味苦味のバランスをとった上質の大人の楽しみ。<br>
+								飽きがこず、どんなお食事にも合うビール<br><br>
+								COEDOは日本の色名を冠する6つのビールを作っています。
+									<p style="color: rgb(70, 0, 55); font-size: x-small; line-height: 20px;">
+									・毬花 -Marihana-<Br>淡い黄金色と純白の泡にシトラスを想わせるアロマホップが華やかに香るセッション・IPA。<Br>
+									・瑠璃 -Ruri<Br>-クリアな黄金色と白く柔らかな泡のコントラスト、さわやかな飲み口が特徴のプレミアムピルスナービール。<Br>
+									・白 -Shiro-<Br>無濾過ビールならではの明るくなめらかな白濁色が特徴の小麦のビール。<Br>
+									・伽羅 -Kyara-<Br>鮮やかで綺麗な苦味とともに白葡萄やスパイシーな柑橘を感じさせるアロマホップが広がるインディア・ペール・ラガー。<Br>
+									・漆黒 -Shikkoku-<Br>艶やかな黒色と茶白色の細やかな泡立ちのコントラストが冴える長期熟成ビール。<Br>
+									・紅赤 -Beniaka-<Br>赤みがかった琥珀色と香ばしい甘味が特徴のプレミアムエール。
+									</p>
+									あなたお好みの一つを見つけられること、間違いなし。
+							</p>
+							<p class="beer-food">
+								おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
+							</p>
+						</div>
+			
+					</div>
+					<div class="beer-title-wrapper">
+						<titles class="beer-title">クローネンブルグ1664ブラン</titles>
+						<button class="beer-tag belgian-white">Belgian White</button>
+						<span class="beer-purchase">
+							購入場所：<a
+								href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS" target=”_blank”>アマゾン</a>
+						</span>
+					</div>
+					<div class="beer-description-wrapper">
+						<img src="images/banners/1664.png" alt="クローネンブルグ1664ブランの写真" class="beer-image" />
+						<div class="beer-chart-wrapper">
+							<canvas class='beer-chart-canvas' id="branc"></canvas>
+						</div>
+					
+						<div class="beer-description">
+							<p class="beer-description-title">
+								スパイスが爽やか香るフランスの白ビール
+								<br>
+								『クローネンブルグ1664ブラン』
+							</p>
+							<p class="beer-description-text">
+								オレンジピールとコリアンダーが香りの決め手<Br>
+								ほのかに甘い柑橘系の風味で、苦味が柔らかく飲みやすい白ビール。<Br>
+									<br>
+									柑橘系で苦みの少ない味わいのため、白ワインのように様々な料理とマリアージュをお楽しみいただけます。<Br>
+									ボトルデザインも洗練されており、是非コレクションの一つとしても並べておきたい一本です。<Br>
+									美食学、ファッション、芸術の国フランスならではの丹念に仕上げた豊かな味わい、是非この機会にいかがでしょう。<Br>
+							</p>
+							<p class="beer-food">
+								おすすめのおつまみ：シーフード、サラダ、フルーツなど
+							</p>
+						</div>
+			
+					</div>
 
 
 			<footer id="footer">
@@ -139,38 +184,53 @@
 </html>
 
 <script>
-	// パンクIPAのグラフデータ
-	const punkIpaData = {
-		// 味パラメータのラベル
-		labels: ["ホップ感", "甘味", "苦み", "キレ", "酸味", "ボディ"],
+	const canvasIds = ["punkIPA", "ruri", "branc"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+	// 各ビールのグラフデータ
+	const beerData = {
 		datasets: [{
-			// グラフ名
-			label: "パンクIPA",
-			// パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
-			data: [5, 3, 8, 8, 5, 4],
-			// 線の色
-			borderColor: "#94933B"
-		}, ],
+				label: "パンクIPA", // グラフ名
+				data: [8, 3, 8, 8, 5, 4], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+				borderColor: "#94933B" // 線の色
+			},
+			{
+				label: "瑠璃",
+				data: [3, 3, 4, 8, 4, 3],
+				borderColor: "#94933B"
+			},
+			{
+				label: "クローネンブルグ1664ブラン",
+				data: [3, 7, 3, 5, 6, 6],
+				borderColor: "#94933B"
+			}
+		],
 	};
-	// グラフを描画する処理
-	const ctx = document.getElementById("punkIPA");
-	const chart_cv = new Chart(ctx, {
-		type: "radar", // グラフの種類
-		data: punkIpaData, // データ
-		// グラフの設定
-		options: {
-			scale: {
-				ticks: {
-					suggestedMin: 0, //グラフの最小表示値
-					suggestedMax: 10, //グラフの最大表示値
-					fontSize: 16, // 目盛り数字の大きさ
-					stepSize: 2 //目盛の間隔
+	// チャートを生成する処理
+	const createNewChart = (canvasId, datasets) => {
+		const ctx = document.getElementById(canvasId);
+		const radarCharts = new Chart(ctx, {
+			type: "radar",
+			data: {
+				labels: ["ホップ感", "甘味", "苦み", "キレ", "酸味", "ボディ"], // Ｘ軸のラベル
+				datasets: datasets
+			},
+			options: {
+				scale: {
+					ticks: {
+						suggestedMin: 0, //グラフの最小表示値
+						suggestedMax: 10, //グラフの最大表示値
+						fontSize: 16, // 目盛り数字の大きさ
+						stepSize: 2 //目盛の間隔
+					},
+				},
+				maintainAspectRatio: false,
+				legend: {
+					display: false // 凡例の表示
 				},
 			},
-			maintainAspectRatio: false,
-			legend: {
-				display: false // 凡例の表示
-			},
-		},
-	});
+		});
+	}
+	// ここで処理を実行する（canvasIdsの中身の数分だけチャートが生成される）
+	for (let index = 0; index < canvasIds.length; index++) {
+		createNewChart(canvasIds[index], [beerData.datasets[index]])
+	}
 </script>
