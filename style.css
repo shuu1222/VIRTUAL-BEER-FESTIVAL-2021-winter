@@ -311,7 +311,7 @@ color:#555;
 }
 
 .pagenav a:hover{
-color:#a5a5a5;
+  color:#a5a5a5;
 }
 
 .prev{float:left}
@@ -500,7 +500,8 @@ color:#a5a5a5;
 
 #topnav li.current-menu-item a,#topnav a:hover{
 background:#FFFFFF;
-color:#ffd700
+color:#ffd700;
+transition: background-color 0.5s;
 }
 
 #topnav ul{
@@ -537,6 +538,7 @@ border-bottom-width:1px;
 padding-bottom:10px;
 border-bottom-width:3px;
 background:#FFFFFF;
+transition: background-color 0.5s;
 }
 }
 
