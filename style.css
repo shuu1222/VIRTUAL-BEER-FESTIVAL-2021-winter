@@ -311,7 +311,7 @@ color:#555;
 }
 
 .pagenav a:hover{
-  color:#a5a5a5;
+color:#a5a5a5;
 }
 
 .prev{float:left}
@@ -402,12 +402,13 @@ margin:10px 0;
 }
 
 .post table th,.post table td{
+text-align:center;
 padding:12px;
 border:1px solid #ccc;
 }
 
 .post table th{
-text-align:right;
+text-align:center;
 font-weight:bold;
 letter-spacing:1px;
 white-space:nowrap;
@@ -500,8 +501,7 @@ color:#a5a5a5;
 
 #topnav li.current-menu-item a,#topnav a:hover{
 background:#FFFFFF;
-color:#ffd700;
-transition: background-color 0.5s;
+color:#ffd700
 }
 
 #topnav ul{
@@ -538,7 +538,6 @@ border-bottom-width:1px;
 padding-bottom:10px;
 border-bottom-width:3px;
 background:#FFFFFF;
-transition: background-color 0.5s;
 }
 }
 
