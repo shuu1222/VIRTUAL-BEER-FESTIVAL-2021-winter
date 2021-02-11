@@ -59,6 +59,14 @@
 .beer-chart-canvas {
   display: inline-block;
 }
+.selectable {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.selectable:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 3px #fff;
+}
 .ipa {
   background-color: #3cb371;
 }
@@ -68,11 +76,8 @@
 .pilsner {
   background-color: #d6d300;
 }
-.selectable {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.selectable:hover {
-  opacity: 0.8;
-  box-shadow: 0 0 0 3px #fff;
+
+.stout{
+  background-color: #501d00;
+
 }

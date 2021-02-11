@@ -54,6 +54,7 @@
 						onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
+					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
 					<button class="beer-tag selectable" style="background-color: darkgrey;"
 						onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
@@ -200,6 +201,42 @@
 						</div>
 					</div>
 
+
+					<!-- ! インペリアルチョコレートスタウト -->
+					<div id="stout">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">インペリアルチョコレートスタウト</titles>
+							<button class="beer-tag stout">Stout</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/"
+									target=”_blank”>サンクトガーレンオンラインストア</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/chocostout.png" alt="インペリアルチョコレートスタウトの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="sankt-stout"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									泡まで真っ黒！特濃ビターチョコ風味
+									<br>
+									『インペリアルチョコレートスタウト』
+								</p>
+								<p class="beer-description-text">
+									毎年バレンタインに大人気のインペリアルチョコレートスタウト<Br>
+									通常の黒ビールの3倍もの原材料を使用しているので、濃厚な1杯に仕上がっています。<Br>
+									インペリアルスタウトの名にふさわしい重厚感のある味わいと深みのある微かな甘みがあなたを満足させてくれること間違いなし。<Br>
+									原材料にチョコレートは入っていませんが、まるでチョコレートが入っているかのような華やかな香りが感じられます。
+									アルコールも9％と高く、ワインのように2年間熟成可能です。<Br>
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：チーズ、チョコレート、ドライフルーツなど
+								</p>
+							</div>
+						</div>
+					</div>
+
 					<footer id="footer">
 						<div class="inner">
 							<section class="gridWrapper">
@@ -222,7 +259,7 @@
 </html>
 
 <script>
-	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
 		datasets: [{
@@ -243,6 +280,11 @@
 			{
 				label: "白濁",
 				data: [4, 6, 2, 3, 6, 7],
+				borderColor: "#94933B"
+			},
+			{
+				label: "インペリアルチョコレートスタウト",
+				data: [3, 3, 8, 2, 4, 9],
 				borderColor: "#94933B"
 			}
 		],
@@ -278,7 +320,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white"]
+	const styleList = ["ipa", "pilsner", "b-white", "stout"]
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
