@@ -48,141 +48,181 @@
 	<div id="wrapper">
 		<section id="main">
 			<section class="content">
-				<h3 class="heading">おすすめビール</h3>
+				<h3 class="heading">おすすめビール
+					<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
+					<button class="beer-tag pilsner selectable"
+						onclick="filterSelectedStyles('pilsner')">Pilsner</button>
+					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
+						White</button>
+					<button class="beer-tag selectable" style="background-color: darkgrey;"
+						onclick="filterSelectedStyles('show-all')">すべて表示</button>
+				</h3>
 				<article class="post">
-					<div class="beer-title-wrapper">
-						<titles class="beer-title">PUNK IPA</titles>
-						<button class="beer-tag ipa">IPA</button>
-						<span class="beer-purchase">
-							購入場所：<a
-								href="https://www.amazon.co.jp/dp/B073ZQWRS/ref=cm_sw_r_tw_dp_tRg8Fb8R0ANAA?_x_encoding=UTF8&psc=1" target=”_blank”>アマゾン</a>
-						</span>
-					</div>
-					<div class="beer-description-wrapper">
-						<img src="images/banners/punkipa.png" alt="" class="beer-image" />
-						<div class="beer-chart-wrapper">
-							<!-- パンクIPAのグラフ -->
-							<canvas class='beer-chart-canvas' id="punkIPA"></canvas>
-						</div>
-						<div class="beer-description">
-							<p class="beer-description-title">
-								英国No.1クラフトビール『パンク IPA』
-							</p>
-							<p class="beer-description-text">
-								透明感のあるゴールデンカラー。ホップ由来のトロピカルやグレープフルーツのアロマが華やかに香ります。<BR>
-								大量のホップを贅沢に使い、手間を惜しまずホップのアロマを最大限に引き出しています。<br>
-								グラスに注ぐと透明感のあるクリアなゴールデンカラー。
-								<br>
-								香りはしっかりとした上質な麦芽、トロピカルフルーツ、そして何よりも ブリュードッグらしいグレープフルーツ香 が、 大量のホップ
-								とともに現れます。
-								<br>
-								ドライホッピングによる終わりの無い素晴らしい余韻へとつながります。<br>
-							</p>
-							<p class="beer-food">
-								おすすめのおつまみ：ナッツ,ピクルスなど
-							</p>
-						</div>
-
-					</div>
 
 
-					<div class="beer-title-wrapper">
-						<titles class="beer-title">COEDO 瑠璃</titles>
-						<button class="beer-tag pilsner">Pilsner</button>
-						<span class="beer-purchase">
-							購入場所：<a href="https://webshop-coedobrewery.com/" target=”_blank”>COEDO Online Shop</a>
-						</span>
-					</div>
-					<div class="beer-description-wrapper">
-						<img src="images/banners/koedo.png" alt="COEDO 瑠璃の写真" class="beer-image" />
-						<div class="beer-chart-wrapper">
-							<canvas class='beer-chart-canvas' id="ruri"></canvas>
+					<!-- ! パンクIPA -->
+					<div id="ipa">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">PUNK IPA</titles>
+							<button class="beer-tag ipa">IPA</button>
+							<span class="beer-purchase">
+								購入場所：<a
+									href="https://www.amazon.co.jp/dp/B073ZQWRS/ref=cm_sw_r_tw_dp_tRg8Fb8R0ANAA?_x_encoding=UTF8&psc=1"
+									target=”_blank”>アマゾン</a>
+							</span>
 						</div>
-					
-						<div class="beer-description">
-							<p class="beer-description-title">
-								小江戸川越で生まれたプレミアムピルスナー
-								『瑠璃』
-							</p>
-							<p class="beer-description-text">
-								軽やかな口当たりながらも、深みある味わいとホップの香味苦味のバランスをとった上質の大人の楽しみ。<br>
-								飽きがこず、どんなお食事にも合うビール<br><br>
-								COEDOは日本の色名を冠する6つのビールを作っています。
-									<p style="color: rgb(70, 0, 55); font-size: x-small; line-height: 20px;">
-									・毬花 -Marihana-<Br>淡い黄金色と純白の泡にシトラスを想わせるアロマホップが華やかに香るセッション・IPA。<Br>
-									・瑠璃 -Ruri<Br>-クリアな黄金色と白く柔らかな泡のコントラスト、さわやかな飲み口が特徴のプレミアムピルスナービール。<Br>
-									・白 -Shiro-<Br>無濾過ビールならではの明るくなめらかな白濁色が特徴の小麦のビール。<Br>
-									・伽羅 -Kyara-<Br>鮮やかで綺麗な苦味とともに白葡萄やスパイシーな柑橘を感じさせるアロマホップが広がるインディア・ペール・ラガー。<Br>
-									・漆黒 -Shikkoku-<Br>艶やかな黒色と茶白色の細やかな泡立ちのコントラストが冴える長期熟成ビール。<Br>
-									・紅赤 -Beniaka-<Br>赤みがかった琥珀色と香ばしい甘味が特徴のプレミアムエール。
-									</p>
-									あなたお好みの一つを見つけられること、間違いなし。
-							</p>
-							<p class="beer-food">
-								おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
-							</p>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/punkipa.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- パンクIPAのグラフ -->
+								<canvas class='beer-chart-canvas' id="punkIPA"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									英国No.1クラフトビール『パンク IPA』
+								</p>
+								<p class="beer-description-text">
+									透明感のあるゴールデンカラー。ホップ由来のトロピカルやグレープフルーツのアロマが華やかに香ります。<BR>
+									大量のホップを贅沢に使い、手間を惜しまずホップのアロマを最大限に引き出しています。<br>
+									グラスに注ぐと透明感のあるクリアなゴールデンカラー。
+									<br>
+									香りはしっかりとした上質な麦芽、トロピカルフルーツ、そして何よりも ブリュードッグらしいグレープフルーツ香 が、 大量のホップ
+									とともに現れます。
+									<br>
+									ドライホッピングによる終わりの無い素晴らしい余韻へとつながります。<br>
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：ナッツ,ピクルスなど
+								</p>
+							</div>
 						</div>
-			
 					</div>
-					<div class="beer-title-wrapper">
-						<titles class="beer-title">クローネンブルグ1664ブラン</titles>
-						<button class="beer-tag belgian-white">Belgian White</button>
-						<span class="beer-purchase">
-							購入場所：<a
-								href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS" target=”_blank”>アマゾン</a>
-						</span>
-					</div>
-					<div class="beer-description-wrapper">
-						<img src="images/banners/1664.png" alt="クローネンブルグ1664ブランの写真" class="beer-image" />
-						<div class="beer-chart-wrapper">
-							<canvas class='beer-chart-canvas' id="branc"></canvas>
+
+
+					<!-- ! COEDO 瑠璃 -->
+					<div id="pilsner">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">COEDO 瑠璃</titles>
+							<button class="beer-tag pilsner">Pilsner</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://webshop-coedobrewery.com/" target=”_blank”>COEDO Online Shop</a>
+							</span>
 						</div>
-					
-						<div class="beer-description">
-							<p class="beer-description-title">
-								スパイスが爽やか香るフランスの白ビール
-								<br>
-								『クローネンブルグ1664ブラン』
-							</p>
-							<p class="beer-description-text">
-								オレンジピールとコリアンダーが香りの決め手<Br>
-								ほのかに甘い柑橘系の風味で、苦味が柔らかく飲みやすい白ビール。<Br>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/koedo.png" alt="COEDO 瑠璃の写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="ruri"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									小江戸川越で生まれたプレミアムピルスナー
+									『瑠璃』
+								</p>
+								<p class="beer-description-text">
+									軽やかな口当たりながらも、深みある味わいとホップの香味苦味のバランスをとった上質の大人の楽しみ。<br>
+									飽きがこず、どんなお食事にも合うビール<br>
+									軽やかな口当たりながらも、深みのある味わいとホップの香味苦味のバランスをとった上質な大人の楽しみ。<br>飽きがこず、どんなお食事にも合うビールです。
+									その透明感溢れる特徴にちなんで「瑠璃-Ruri-」と名付けられました。
+								<p class="beer-food">
+									おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ! クローネンブルグ1664ブラン -->
+					<div id="b-white">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">クローネンブルグ1664ブラン</titles>
+							<button class="beer-tag belgian-white">Belgian White</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS"
+									target=”_blank”>アマゾン</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/1664.png" alt="クローネンブルグ1664ブランの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="branc"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									スパイスが爽やか香るフランスの白ビール
+									<br>
+									『クローネンブルグ1664ブラン』
+								</p>
+								<p class="beer-description-text">
+									オレンジピールとコリアンダーが香りの決め手<Br>
+									ほのかに甘い柑橘系の風味で、苦味が柔らかく飲みやすい白ビール。<Br>
 									<br>
 									柑橘系で苦みの少ない味わいのため、白ワインのように様々な料理とマリアージュをお楽しみいただけます。<Br>
 									ボトルデザインも洗練されており、是非コレクションの一つとしても並べておきたい一本です。<Br>
 									美食学、ファッション、芸術の国フランスならではの丹念に仕上げた豊かな味わい、是非この機会にいかがでしょう。<Br>
-							</p>
-							<p class="beer-food">
-								おすすめのおつまみ：シーフード、サラダ、フルーツなど
-							</p>
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：シーフード、サラダ、フルーツなど
+								</p>
+							</div>
 						</div>
-			
+
+
+					<!-- ! 白濁り -->
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">白濁り</titles>
+							<button class="beer-tag belgian-white">Belgian White</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://beerhouse.co.jp/shopdetail/000000000078"
+									target=”_blank”>ビアハウスオンラインショップ</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/shironigori.png" alt="白濁りの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="shironigori"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									逆さまの缶がインパクト大！
+									<br>
+									『白濁』
+								</p>
+								<p class="beer-description-text">
+									ベルジアンホワイトスタイルながらもスパイスを入れず、小麦本来の特徴を全面的に押し出しています。
+									スパイスを使用していないので、芳醇な味わいとほのかなフローラルの香りを感じられます。<Br>
+									和風なネーミングですが本場ベルギーで醸造された本格派白ビールです。<Br><Br>
+									スパイスが入っていない分、前に出過ぎない軽やかな味わいなので様々な料理と合わせることができます。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：ケーキ、ピリ辛チキン、ムニエルなど
+								</p>
+							</div>
+						</div>
 					</div>
 
-
-			<footer id="footer">
-				<div class="inner">
-					<section class="gridWrapper">
-						<article class="grid">
-							<p class="logo"><a href="index.html" title="びあふぇす！" rel="home">VIRTUAL BEER FESTIVAL 2021<br /><span>No Beer&Music,No life.</span></a></p>
-						</article>
-						<article class="grid">
-							<p class="tel"><span>　</span></p>
-							<p class="open">　</p>
-						</article>
-						<article class="grid copyright">
-							Copyright(c) VIRTUAL BEER FESTIVAL 2021 team All Rights Reserved.</a>
-						</article>
-					</section>
-				</div>
-			</footer>
+					<footer id="footer">
+						<div class="inner">
+							<section class="gridWrapper">
+								<article class="grid">
+									<p class="logo"><a href="index.html" title="びあふぇす！" rel="home">VIRTUAL BEER FESTIVAL 2021<br /><span>No Beer&Music,No life.</span></a></p>
+								</article>
+								<article class="grid">
+									<p class="tel"><span>　</span></p>
+									<p class="open">　</p>
+								</article>
+								<article class="grid copyright">
+									Copyright(c) VIRTUAL BEER FESTIVAL 2021 team All Rights Reserved.</a>
+								</article>
+							</section>
+						</div>
+					</footer>
 
 </body>
 
 </html>
 
 <script>
-	const canvasIds = ["punkIPA", "ruri", "branc"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
 		datasets: [{
@@ -192,12 +232,17 @@
 			},
 			{
 				label: "瑠璃",
-				data: [3, 3, 4, 8, 4, 3],
+				data: [4, 4, 4, 8, 4, 3],
 				borderColor: "#94933B"
 			},
 			{
 				label: "クローネンブルグ1664ブラン",
 				data: [3, 7, 3, 5, 6, 6],
+				borderColor: "#94933B"
+			},
+			{
+				label: "白濁",
+				data: [4, 6, 2, 3, 6, 7],
 				borderColor: "#94933B"
 			}
 		],
@@ -230,5 +275,24 @@
 	// ここで処理を実行する（canvasIdsの中身の数分だけチャートが生成される）
 	for (let index = 0; index < canvasIds.length; index++) {
 		createNewChart(canvasIds[index], [beerData.datasets[index]])
+	}
+
+	// スタイルのID一覧
+	const styleList = ["ipa", "pilsner", "b-white"]
+	// スタイル絞り込みボタンをクリックした際の処理
+	const filterSelectedStyles = (style) => {
+		if (style === "show-all") {
+			for (let index2 = 0; index2 < styleList.length; index2++) {
+				document.getElementById(styleList[index2]).style.display = "block"
+			}
+		} else {
+			const element = document.getElementById(style);
+			element.style.display = "block";
+			for (let index = 0; index < styleList.length; index++) {
+				if (style != styleList[index]) {
+					document.getElementById(styleList[index]).style.display = "none"
+				}
+			}
+		}
 	}
 </script>
