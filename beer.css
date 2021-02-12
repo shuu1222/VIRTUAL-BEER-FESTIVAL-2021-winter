@@ -81,3 +81,21 @@
   background-color: #501d00;
 
 }
+.weizen{
+  background-color: #bea357;
+
+}
+.official{
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  margin-left: 15px;
+  opacity: 0.5;
+}
+.staff-recommendation{
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  margin-left: 15px;
+  opacity: 0.5;
+}

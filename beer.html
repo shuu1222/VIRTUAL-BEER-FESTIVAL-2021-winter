@@ -50,22 +50,58 @@
 			<section class="content">
 				<h3 class="heading">おすすめビール
 					<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
-					<button class="beer-tag pilsner selectable"
-						onclick="filterSelectedStyles('pilsner')">Pilsner</button>
+					<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
 					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
+					<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
 					<button class="beer-tag selectable" style="background-color: darkgrey;"
 						onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
 				<article class="post">
 
 
+					<!-- ! びあへるんヴァイツェン -->
+					<div id="weizen">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">松江ビアへるん　ヴァイツェン</titles>
+							<button class="beer-tag weizen">Weizen</button>
+							<button class="official">公式インタビュー</button>
+							<span class="beer-purchase">
+								購入場所：<a href="http://shimanebeerh.free.makeshop.jp/" target=”_blank”>松江地ビールビアへるん オンラインショップ</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/heln_weiz.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- パンクIPAのグラフ -->
+								<canvas class='beer-chart-canvas' id="helnWeiz"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									バナナフルーティ！日本一濃厚を目指す小麦ビール<BR>『松江ビアへるん　ヴァイツェン』
+								</p>
+								<p class="beer-description-text">
+									アゴ出汁や濃厚な醤油を使う「しまね県」の食にあわせて造り上げた香り濃厚！味わい濃厚なヴァイツェン。<BR>
+									ビールの香りの中にフェノールという醤油に必ず含まれる香り成分があり醤油との相性が良いので和食におすすめのビールです。<BR>
+									ドイツ発祥の黄白色の小麦ビール。<BR>
+									小麦麦芽ならではのフルーティな薫りと
+									クリーミーな泡立ちが特徴。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：<BR>特に西日本の濃厚な醤油との相性がよく、<BR>刺し身（甘濃い刺し身醤油）、サバ味噌煮もおすすめ。<BR>
+									またドイツ系ビールなので、ポテト、チーズ、ソーセージは鉄板。
+								</p>
+							</div>
+						</div>
+					</div>
+
 					<!-- ! パンクIPA -->
 					<div id="ipa">
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">PUNK IPA</titles>
 							<button class="beer-tag ipa">IPA</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
 								購入場所：<a
 									href="https://www.amazon.co.jp/dp/B073ZQWRS/ref=cm_sw_r_tw_dp_tRg8Fb8R0ANAA?_x_encoding=UTF8&psc=1"
@@ -105,6 +141,7 @@
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">COEDO 瑠璃</titles>
 							<button class="beer-tag pilsner">Pilsner</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
 								購入場所：<a href="https://webshop-coedobrewery.com/" target=”_blank”>COEDO Online Shop</a>
 							</span>
@@ -124,9 +161,9 @@
 									飽きがこず、どんなお食事にも合うビール<br>
 									軽やかな口当たりながらも、深みのある味わいとホップの香味苦味のバランスをとった上質な大人の楽しみ。<br>飽きがこず、どんなお食事にも合うビールです。
 									その透明感溢れる特徴にちなんで「瑠璃-Ruri-」と名付けられました。
-								<p class="beer-food">
-									おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
-								</p>
+									<p class="beer-food">
+										おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
+									</p>
 							</div>
 						</div>
 					</div>
@@ -137,6 +174,7 @@
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">クローネンブルグ1664ブラン</titles>
 							<button class="beer-tag belgian-white">Belgian White</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
 								購入場所：<a href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS"
 									target=”_blank”>アマゾン</a>
@@ -168,13 +206,13 @@
 						</div>
 
 
-					<!-- ! 白濁り -->
+						<!-- ! 白濁り -->
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">白濁り</titles>
 							<button class="beer-tag belgian-white">Belgian White</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://beerhouse.co.jp/shopdetail/000000000078"
-									target=”_blank”>ビアハウスオンラインショップ</a>
+								購入場所：<a href="https://beerhouse.co.jp/shopdetail/000000000078" target=”_blank”>ビアハウスオンラインショップ</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
@@ -207,9 +245,9 @@
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">インペリアルチョコレートスタウト</titles>
 							<button class="beer-tag stout">Stout</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/"
-									target=”_blank”>サンクトガーレンオンラインストア</a>
+								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/" target=”_blank”>サンクトガーレンオンラインストア</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
@@ -241,7 +279,8 @@
 						<div class="inner">
 							<section class="gridWrapper">
 								<article class="grid">
-									<p class="logo"><a href="index.html" title="びあふぇす！" rel="home">VIRTUAL BEER FESTIVAL 2021<br /><span>No Beer&Music,No life.</span></a></p>
+									<p class="logo"><a href="index.html" title="びあふぇす！" rel="home">VIRTUAL BEER FESTIVAL
+											2021<br /><span>No Beer&Music,No life.</span></a></p>
 								</article>
 								<article class="grid">
 									<p class="tel"><span>　</span></p>
@@ -259,7 +298,8 @@
 </html>
 
 <script>
-	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout",
+		"helnWeiz"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
 		datasets: [{
@@ -285,6 +325,11 @@
 			{
 				label: "インペリアルチョコレートスタウト",
 				data: [3, 3, 8, 2, 4, 9],
+				borderColor: "#94933B"
+			},
+			{
+				label: "松江ビアへるん　ヴァイツェン",
+				data: [1, 6, 2, 2, 5, 9],
 				borderColor: "#94933B"
 			}
 		],
@@ -320,7 +365,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white", "stout"]
+	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen"]
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
