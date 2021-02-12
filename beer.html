@@ -49,12 +49,15 @@
 		<section id="main">
 			<section class="content">
 				<h3 class="heading">おすすめビール
+					<!-- !絞り込みボタン -->
 					<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
 					<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
 					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
 					<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
+					<button class="beer-tag red selectable" onclick="filterSelectedStyles('red')">Red Beer</button>
+					<button class="beer-tag lambic selectable" onclick="filterSelectedStyles('lambic')"> Lambic</button>
 					<button class="beer-tag selectable" style="background-color: darkgrey;"
 						onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
@@ -91,6 +94,147 @@
 								<p class="beer-food">
 									おすすめのおつまみ：<BR>特に西日本の濃厚な醤油との相性がよく、<BR>刺し身（甘濃い刺し身醤油）、サバ味噌煮もおすすめ。<BR>
 									またドイツ系ビールなので、ポテト、チーズ、ソーセージは鉄板。
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div id="stout">
+						<!-- ! びあへるんスタウト -->
+						<div id="weizen">
+							<div class="beer-title-wrapper">
+								<titles class="beer-title">松江ビアへるん　縁結麦酒スタウト</titles>
+								<button class="beer-tag stout">Stout</button>
+								<button class="official">公式インタビュー</button>
+								<span class="beer-purchase">
+									購入場所：<a href="http://shimanebeerh.free.makeshop.jp/" target=”_blank”>松江地ビールビアへるん オンラインショップ</a>
+								</span>
+							</div>
+							<div class="beer-description-wrapper">
+								<img src="images/banners/helnStout.png" alt="" class="beer-image" />
+								<div class="beer-chart-wrapper">
+									<!-- パンクIPAのグラフ -->
+									<canvas class='beer-chart-canvas' id="helnStout"></canvas>
+								</div>
+								<div class="beer-description">
+									<p class="beer-description-title">
+										苦くない！焙煎マイルド黒ビール！これが縁で結ばれた人も<BR>『松江ビアへるん　縁結麦酒スタウト』
+									</p>
+									<p class="beer-description-text">
+										日本の晩酌！家庭の晩御飯に合う黒ビールを目指して造りました。<BR>
+										アイルランド伝統のミルクスタウト製法で大手黒ビールにはない、おどろくほどマイルドな黒ビールです。<BR>
+										大手の黒ビールは飲めないけど、こちらは好きというファンが多いです。おつまみに肉じゃが、豚角煮もいけます！<BR>
+									</p>
+									<p class="beer-food">
+										おすすめのおつまみ：<BR>焙煎の香りは実は醤油と共通する香り！おつまみに肉じゃが、豚角煮もいけます！<BR>
+										黒い色は焦がした麦を使っているからなので、香ばしいスモークナッツやベーコンなどの燻製モノが鉄板。
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- ! インペリアルチョコレートスタウト -->
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">インペリアルチョコレートスタウト</titles>
+							<button class="beer-tag stout">Stout</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/" target=”_blank”>サンクトガーレンオンラインストア</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/chocostout.png" alt="インペリアルチョコレートスタウトの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="sankt-stout"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									泡まで真っ黒！特濃ビターチョコ風味
+									<br>
+									『インペリアルチョコレートスタウト』
+								</p>
+								<p class="beer-description-text">
+									毎年バレンタインに大人気のインペリアルチョコレートスタウト<Br>
+									通常の黒ビールの3倍もの原材料を使用しているので、濃厚な1杯に仕上がっています。<Br>
+									インペリアルスタウトの名にふさわしい重厚感のある味わいと深みのある微かな甘みがあなたを満足させてくれること間違いなし。<Br>
+									原材料にチョコレートは入っていませんが、まるでチョコレートが入っているかのような華やかな香りが感じられます。
+									アルコールも9％と高く、ワインのように2年間熟成可能です。<Br>
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：チーズ、チョコレート、ドライフルーツなど
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- ! ドゥシャス･デ･ブルゴーニュ -->
+					<div id="red">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">ドゥシャス･デ･ブルゴーニュ</titles>
+							<button class="beer-tag red">Red Beer</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a
+									href="https://www.belgianbeer.co.jp/products/detail.php?product_id=84"
+									target=”_blank”>BELGIAN BEER JAPAN</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/Duchesse.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- ドゥシャス･デ･ブルゴーニュのグラフ -->
+								<canvas class='beer-chart-canvas' id="duchesse"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									オーク樽熟成させた伝統的なレッド・ビール<BR>『Duchesse de Bourgogne』
+								</p>
+								<p class="beer-description-text">
+									オーク樽で18カ月間熟成したビールと、8カ月間熟成した若いビールとをブレンド<BR>
+									一口飲むとビールとは思えない爽やかな酸味とフルーツのような甘さ、樽の香りが広がります<br>
+									本場ベルギーならではの複雑な味わい。日本のビールではここまで複雑な風味を持つビールは殆どで会うことができません。
+									<br>
+									ビールの概念を覆す一杯です。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：ブルーチーズ、牛肉のビール煮などしっかりとした味の肉料理とよく合います。
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- ! リンデマンス・クリーク -->
+					<div id="lambic">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">リンデマンス・クリーク</titles>
+							<button class="beer-tag lambic">Lambic</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a
+									href="https://www.belgianbeer.co.jp/products/detail.php?product_id=656"
+									target=”_blank”>BELGIAN BEER JAPAN</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/kriek.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- リンデマンス・クリークのグラフ -->
+								<canvas class='beer-chart-canvas' id="kriek"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									自然発酵ビール　この味本当にビール！？<BR>『Lindemans Kriek』
+								</p>
+								<p class="beer-description-text">
+								世界的にもとても珍しい自然発酵ビール<BR>
+									オーク樽で熟成されたランビックとチェリージュースから作られています。<br>
+									摘みたてのチェリーの爽やかな酸味とまるでジュースのような甘さ<br>
+									新鮮なチェリーの爽やかさの絶妙なバランスで飲む人を魅了します。<br>
+									グラスにたっぷりと氷を入れて楽しむロックスタイルも人気です。<br><br>
+									どうしてもビールが苦手というそこのあなた、甘いお酒が好きであれば必ず気に入るでしょう。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：ワッフル、ムール貝の白ワイン蒸し、エッグベネディクトなど
 								</p>
 							</div>
 						</div>
@@ -136,8 +280,8 @@
 					</div>
 
 
-					<!-- ! COEDO 瑠璃 -->
 					<div id="pilsner">
+						<!-- ! COEDO 瑠璃 -->
 						<div class="beer-title-wrapper">
 							<titles class="beer-title">COEDO 瑠璃</titles>
 							<button class="beer-tag pilsner">Pilsner</button>
@@ -163,6 +307,36 @@
 									その透明感溢れる特徴にちなんで「瑠璃-Ruri-」と名付けられました。
 									<p class="beer-food">
 										おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
+									</p>
+							</div>
+						</div>
+						<!-- ! ビアラオ -->
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">ビアラオ</titles>
+							<button class="beer-tag pilsner">Pilsner</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a href="https://item.rakuten.co.jp/sawaya/beerlaobottle24case-2/" target=”_blank”>楽天</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/beerlao.png" alt="beer laoの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="lao"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									ラオスの手つかずの自然から
+									『Beer LaoBeer Lao』
+								</p>
+								<p class="beer-description-text">
+									滑らかなのど越しとコクのあるやわらかい甘さ。<br>
+									ラオスの大地が生んだお米、ベルギー産ホップ、ドイツ産麦芽から醸造<br>
+									そのクオリティは数々の品評会などでも評価されています。<br>
+									温暖な気候の国のビールということもあり、氷を入れて飲んでもすっきりしていておいしいです。<br>
+									<p class="beer-food">
+										おすすめのおつまみ：スッキリした味わいなのでエスニックな料理と非常に相性がいいです。
+										ガパオライス、フォー、フライドチキンなど
 									</p>
 							</div>
 						</div>
@@ -239,42 +413,7 @@
 						</div>
 					</div>
 
-
-					<!-- ! インペリアルチョコレートスタウト -->
-					<div id="stout">
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">インペリアルチョコレートスタウト</titles>
-							<button class="beer-tag stout">Stout</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/" target=”_blank”>サンクトガーレンオンラインストア</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/chocostout.png" alt="インペリアルチョコレートスタウトの写真" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="sankt-stout"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									泡まで真っ黒！特濃ビターチョコ風味
-									<br>
-									『インペリアルチョコレートスタウト』
-								</p>
-								<p class="beer-description-text">
-									毎年バレンタインに大人気のインペリアルチョコレートスタウト<Br>
-									通常の黒ビールの3倍もの原材料を使用しているので、濃厚な1杯に仕上がっています。<Br>
-									インペリアルスタウトの名にふさわしい重厚感のある味わいと深みのある微かな甘みがあなたを満足させてくれること間違いなし。<Br>
-									原材料にチョコレートは入っていませんが、まるでチョコレートが入っているかのような華やかな香りが感じられます。
-									アルコールも9％と高く、ワインのように2年間熟成可能です。<Br>
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：チーズ、チョコレート、ドライフルーツなど
-								</p>
-							</div>
-						</div>
-					</div>
-
+<!-- !footer -->
 					<footer id="footer">
 						<div class="inner">
 							<section class="gridWrapper">
@@ -299,7 +438,8 @@
 
 <script>
 	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout",
-		"helnWeiz"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+		"helnWeiz", "helnStout","duchesse", "kriek","lao"
+	] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
 		datasets: [{
@@ -309,7 +449,7 @@
 			},
 			{
 				label: "瑠璃",
-				data: [4, 4, 4, 8, 4, 3],
+				data: [4, 4, 5, 8, 4, 3],
 				borderColor: "#94933B"
 			},
 			{
@@ -331,7 +471,27 @@
 				label: "松江ビアへるん　ヴァイツェン",
 				data: [1, 6, 2, 2, 5, 9],
 				borderColor: "#94933B"
-			}
+			},
+			{
+				label: "松江ビアへるん　縁結麦酒スタウト",
+				data: [2, 6, 2, 2, 2, 6],
+				borderColor: "#94933B"
+			},
+			{
+				label: "ドゥシャス デ ブルゴーニュ",
+				data: [1, 7, 3, 3, 7, 8], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+				borderColor: "#94933B"
+			},
+			{
+				label: "リンデマンス・クリーク",
+				data: [1, 9, 2, 3, 7, 4],
+				borderColor: "#94933B"
+			},
+			{
+				label: "ビアラオ",
+				data: [3, 3, 4, 8, 3, 3],
+				borderColor: "#94933B"
+			},
 		],
 	};
 	// チャートを生成する処理
@@ -365,7 +525,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen"]
+	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen","red","lambic"]
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
