@@ -48,18 +48,20 @@
 	<div id="wrapper">
 		<section id="main">
 			<section class="content">
-				<h3 class="heading">おすすめビール
+				<h3 class="heading">
+					<p>おすすめビール</p>
 					<!-- !絞り込みボタン -->
 					<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
 					<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
-					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
-					<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
+						<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
+						<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
 					<button class="beer-tag red selectable" onclick="filterSelectedStyles('red')">Red Beer</button>
 					<button class="beer-tag lambic selectable" onclick="filterSelectedStyles('lambic')"> Lambic</button>
+					<button class="beer-tag bock selectable" onclick="filterSelectedStyles('bock')"> Bock</button>
 					<button class="beer-tag selectable" style="background-color: darkgrey;"
-						onclick="filterSelectedStyles('show-all')">すべて表示</button>
+					onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
 				<article class="post">
 
@@ -278,6 +280,46 @@
 					</div>
 
 
+					<!-- ! サミクラウス -->
+					<div id="bock">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">サミクラウス</titles>
+							<button class="beer-tag bock">ボック</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a
+									href="https://www.nipponbeer.jp/lineup/samichlaus-bier/"
+									target=”_blank”>日本ビール株式会社</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/chlaus.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- サミクラウスのグラフ -->
+								<canvas class='beer-chart-canvas' id="chlaus"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									アルコール度数　驚異の14%<BR>
+									『Samichlaus Bier』
+								</p>
+								<p class="beer-description-text">
+									1年で聖ニコラウス（サンタクロース）の祝祭日に1度だけ醸造される限定ビール<BR>
+										ドッペルボックでありながら、アイスボック並のアルコール度数。<BR>
+											そのアルコール度数は驚異の14％<br>
+									下面発酵ビールとして世界一アルコール度数が高いビールとして過去ギネスブックに認定されたこともあります。<br>
+									10ヶ月の熟成を経てボトル詰めされるため<br>
+									超高アルコールの割にスムースで飲みやすく口に含むと芳醇な香りが脳まで広がります。<br>
+									ワインのように時間をかけて楽しみたい1杯です。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：<br>チョコレートなどのデザートや味の強い食べ物と相性抜群<br>
+									つまみなしでビールそのものだけでも十分に楽しめます。
+								</p>
+							</div>
+						</div>
+					</div>
+
 					<div id="pilsner">
 						<!-- ! COEDO 瑠璃 -->
 						<div class="beer-title-wrapper">
@@ -335,6 +377,38 @@
 									<p class="beer-food">
 										おすすめのおつまみ：スッキリした味わいなのでエスニックな料理と非常に相性がいいです。
 										ガパオライス、フォー、フライドチキンなど
+									</p>
+							</div>
+						</div>
+						<!-- ! コロナ エキストラ -->
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">コロナ エキストラ</titles>
+							<button class="beer-tag pilsner">Pilsner</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a
+									href="https://www.amazon.co.jp/s?rh=n%3A71588051%2Cp_4%3A%E3%82%B3%E3%83%AD%E3%83%8A&ref=bl_dp_s_web_71588051"
+									target=”_blank”>アマゾン</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/corona.png" alt="corona extraの写真" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<canvas class='beer-chart-canvas' id="corona"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									日本の輸入ビール第1位
+									『Corona Extra』
+								</p>
+								<p class="beer-description-text">
+									世界で最も飲まれているプレミアムメキシカンビール<br>
+									透明なボトルと目を引くボトルデザイン<br>
+									キンキンに冷やしてライムを刺して飲むのがスタイル<br>
+									ホップの苦みが弱く気が付くと1瓶空いてしまうようなビールです。。<br>
+									本場ではライムだけではなく塩をプラスして飲む楽しみ方もあるそうな
+									<p class="beer-food">
+										おすすめのおつまみ：ナチョスチップス、チリビーンズなど
 									</p>
 							</div>
 						</div>
@@ -436,7 +510,7 @@
 
 <script>
 	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout",
-		"helnWeiz", "helnStout", "duchesse", "kriek", "lao"
+		"helnWeiz", "helnStout", "duchesse", "kriek", "lao", "corona", "chlaus"
 	] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
@@ -487,7 +561,17 @@
 			},
 			{
 				label: "ビアラオ",
-				data: [3, 3, 4, 8, 3, 3],
+				data: [3, 3, 4, 8, 3, 2],
+				borderColor: "#94933B"
+			},
+			{
+				label: "コロナエキストラ",
+				data: [1, 4, 4, 9, 4, 3],
+				borderColor: "#94933B"
+			},
+			{
+				label: "サミクラウス",
+				data: [7, 6, 7, 1, 5, 10],
 				borderColor: "#94933B"
 			},
 		],
@@ -523,7 +607,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic"]
+	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic", "bock"]
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
