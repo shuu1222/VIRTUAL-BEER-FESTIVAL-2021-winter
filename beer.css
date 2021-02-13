@@ -22,9 +22,10 @@
   border-radius: 4px;
   border: none;
   font-size: large;
-  margin-left: 15px;
+  margin: 3px;
   font-weight: bold;
   color: #fff;
+  line-height: 1.5;
 }
 
 .beer-title {
@@ -124,6 +125,9 @@
 
 .bock {
   background-color: #c45f00;
+}
+.strong {
+  background-color: #c4a700;
 }
 
 .official {

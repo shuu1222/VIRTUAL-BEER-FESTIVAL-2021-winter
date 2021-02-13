@@ -55,13 +55,14 @@
 					<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
-						<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
-						<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
+					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
+					<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
 					<button class="beer-tag red selectable" onclick="filterSelectedStyles('red')">Red Beer</button>
 					<button class="beer-tag lambic selectable" onclick="filterSelectedStyles('lambic')"> Lambic</button>
 					<button class="beer-tag bock selectable" onclick="filterSelectedStyles('bock')"> Bock</button>
+					<button class="beer-tag strong selectable" onclick="filterSelectedStyles('strong')"> Strong Ale</button>
 					<button class="beer-tag selectable" style="background-color: darkgrey;"
-					onclick="filterSelectedStyles('show-all')">すべて表示</button>
+						onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
 				<article class="post">
 
@@ -164,6 +165,43 @@
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：チーズ、チョコレート、ドライフルーツなど
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- ! ルル グランド10 -->
+					<div id="strong">
+						<div class="beer-title-wrapper">
+							<titles class="beer-title">ルル グランド10</titles>
+							<button class="beer-tag strong">Strong Ale</button>
+							<button class="staff-recommendation">スタッフおすすめ</button>
+							<span class="beer-purchase">
+								購入場所：<a href="http://beeronline.jp/?pid=150982382" target=”_blank”>Beer Online.jp</a>
+							</span>
+						</div>
+						<div class="beer-description-wrapper">
+							<img src="images/banners/grande.png" alt="" class="beer-image" />
+							<div class="beer-chart-wrapper">
+								<!-- ルル グランド10のグラフ -->
+								<canvas class='beer-chart-canvas' id="grande"></canvas>
+							</div>
+							<div class="beer-description">
+								<p class="beer-description-title">
+									マニアも唸る激レアな逸品<BR>『La Rulles La Grande 10』
+								</p>
+								<p class="beer-description-text">
+									ルル醸造所の10周年を記念されて誕生したビール<BR>
+									その完成度の高さと人気から世界に輸出されるようになりました。<br>
+									発酵の際に釜の上部を開放して発酵を行う製法で作られており、他にはない特別な味わいを感じられます。
+									<br>
+									洋ナシやリンゴのような華やかな香りと強いパンチが感じられますが、飲みにくいということはなく<br>
+									気が付くとグラスが空になっているようなビールです。<br>
+									ビール専門店でもめったにお目にかかれない激レアなビールです。<br>
+									生産年によって違った味わいがあるので、比較する楽しさもあります。
+								</p>
+								<p class="beer-food">
+									おすすめのおつまみ：ラムチョップ、ポテトフリット、ムール貝のワイン蒸しなど。
 								</p>
 							</div>
 						</div>
@@ -287,9 +325,7 @@
 							<button class="beer-tag bock">ボック</button>
 							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
-								購入場所：<a
-									href="https://www.nipponbeer.jp/lineup/samichlaus-bier/"
-									target=”_blank”>日本ビール株式会社</a>
+								購入場所：<a href="https://www.nipponbeer.jp/lineup/samichlaus-bier/" target=”_blank”>日本ビール株式会社</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
@@ -305,8 +341,8 @@
 								</p>
 								<p class="beer-description-text">
 									1年で聖ニコラウス（サンタクロース）の祝祭日に1度だけ醸造される限定ビール<BR>
-										ドッペルボックでありながら、アイスボック並のアルコール度数。<BR>
-											そのアルコール度数は驚異の14％<br>
+									ドッペルボックでありながら、アイスボック並のアルコール度数。<BR>
+									そのアルコール度数は驚異の14％<br>
 									下面発酵ビールとして世界一アルコール度数が高いビールとして過去ギネスブックに認定されたこともあります。<br>
 									10ヶ月の熟成を経てボトル詰めされるため<br>
 									超高アルコールの割にスムースで飲みやすく口に含むと芳醇な香りが脳まで広がります。<br>
@@ -510,7 +546,7 @@
 
 <script>
 	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout",
-		"helnWeiz", "helnStout", "duchesse", "kriek", "lao", "corona", "chlaus"
+		"helnWeiz", "helnStout", "duchesse", "kriek", "lao", "corona", "chlaus", "grande"
 	] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
@@ -551,12 +587,12 @@
 			},
 			{
 				label: "ドゥシャス デ ブルゴーニュ",
-				data: [1, 7, 3, 3, 7, 8], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+				data: [1, 7, 3, 3, 8, 8], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
 				borderColor: "#94933B"
 			},
 			{
 				label: "リンデマンス・クリーク",
-				data: [1, 9, 2, 3, 7, 4],
+				data: [1, 9, 2, 3, 8, 4],
 				borderColor: "#94933B"
 			},
 			{
@@ -572,6 +608,11 @@
 			{
 				label: "サミクラウス",
 				data: [7, 6, 7, 1, 5, 10],
+				borderColor: "#94933B"
+			},
+			{
+				label: "グランド10",
+				data: [7, 5, 8, 4, 3, 9],
 				borderColor: "#94933B"
 			},
 		],
@@ -607,7 +648,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic", "bock"]
+	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic", "bock", "strong"]
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
