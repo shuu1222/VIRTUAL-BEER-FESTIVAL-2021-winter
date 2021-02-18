@@ -94,6 +94,27 @@
   box-shadow: 0 0 0 3px #fff;
 }
 
+.beer-tab {
+  font-size: x-large;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px rgb(99, 110, 0);
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px 8px 0 0;
+  border: 3px solid rgba(160, 123, 0, 0.6);
+  border-bottom: none;
+  background-color: #fdc11d;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.beer-tab:hover {
+  background-color: #fdaf1d;
+
+
+}
+
 .ipa {
   background-color: #3cb371;
 }
@@ -126,6 +147,7 @@
 .bock {
   background-color: #c45f00;
 }
+
 .strong {
   background-color: #c4a700;
 }
