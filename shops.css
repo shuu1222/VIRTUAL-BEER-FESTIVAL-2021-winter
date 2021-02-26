@@ -1,0 +1,159 @@
+.shop-title-wrapper {
+  display: block;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  margin: 30px 0 15px 0;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* 1024pxまでの幅の場合に適応される */
+  .shop-title-wrapper {
+    display: block;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    margin: 30px 0 15px 0;
+    padding-bottom: 25px;
+  }
+}
+
+.shop-title {
+  font-size: large;
+  color: #696969;
+  font-weight: bold;
+}
+
+.shop-purchase {
+  color: #696969;
+  font-weight: 400;
+  float: right;
+  margin-right: 30px;
+}
+
+.shop-image {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.shop-description-wrapper {
+  display: inline-flex;
+}
+
+.shop-description {
+  width: 45%;
+  color: black;
+  margin-left: 3%;
+  font-family: "Noto Sans JP", sans-serif !important;
+  font-size: 16px;
+}
+
+.shop-description-title {
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.shop-chart-wrapper {
+  width: 30%;
+  min-height: 300px;
+}
+
+.shop-description-text {
+  word-break: break-all;
+}
+
+.shop-food {
+  margin-top: 15px;
+  font-size: medium;
+  color: #696969;
+}
+
+.shop-chart-canvas {
+  display: inline-block;
+}
+
+.selectable {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.selectable:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.shop-tab {
+  font-size: x-large;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px rgb(99, 110, 0);
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px 8px 0 0;
+  border: 3px solid rgba(160, 123, 0, 0.6);
+  border-bottom: none;
+  background-color: #fdc11d;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.shop-tab:hover {
+  background-color: #fdaf1d;
+
+
+}
+
+.ipa {
+  background-color: #3cb371;
+}
+
+.belgian-white {
+  background-color: #9e9478;
+}
+
+.pilsner {
+  background-color: #d6d300;
+}
+
+.stout {
+  background-color: #501d00;
+
+}
+
+.weizen {
+  background-color: #bea357;
+}
+
+.red {
+  background-color: #7e2800;
+}
+
+.lambic {
+  background-color: #007e11;
+}
+
+.bock {
+  background-color: #c45f00;
+}
+
+.strong {
+  background-color: #c4a700;
+}
+
+.official {
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  margin-left: 15px;
+  opacity: 0.5;
+}
+
+.staff-recommendation {
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  margin-left: 15px;
+  opacity: 0.5;
+}
