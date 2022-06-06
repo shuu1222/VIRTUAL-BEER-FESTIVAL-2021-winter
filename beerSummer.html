@@ -1,0 +1,250 @@
+<!-- v-scope value can be omitted -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<div v-scope @mounted="mounted">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="description" content="びあふぇす！">
+		<title>VRC Beer & beer Festival</title>
+		<link rel="stylesheet" type="text/css" media="all" href="style.css">
+		<link rel="stylesheet" type="text/css" media="all" href="beer.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+	</head>
+
+	<body>
+
+		<header id="header" role="banner">
+			<div class="inner">
+				<div class="logo">
+					<a href="index.html" title="VIRTUAL BEER FESTIVAL 2021" rel="home">VIRTUAL BEER FESTIVAL 2021<br /><span>No
+							Beer&Music,No life.</span></a>
+					<h1>VRC内開催ビアフェス開催概要です</h1>
+				</div>
+				<nav id="mainNav">
+					<div class="inner">
+						<a class="menu" id="menu"><span>MENU</span></a>
+						<div class="panel">
+							<ul id="topnav">
+								<li><a href="index.html"><strong>HOME</strong><br /><span>　</span></a></li>
+								<li><a href="about.html"><strong>ABOUT</strong><br /><span>　</span></a>
+								</li>
+								<li><a href="time.html"><strong>TIME TABLE</strong><br /><span>　</span></a></li>
+								<li><a href="beer.html"><strong>BEER</strong><br /><span>　</span></a></li>
+							</ul>
+						</div>
+					</div>
+					< av>nav>
+			</div>
+		</header>
+
+		<div id="wrapper">
+			<section id="main">
+				<section class="content">
+					<h3 class="heading">
+						<div>
+							<button class="beer-tab" onclick="filterSelectedStyles('show-all')">おすすめビール</button>
+							<button class="beer-tab" onclick="location.href='shops.html'">ビールが買えるお店</button>
+						</div>
+						<!-- !絞り込みボタン -->
+						{{categoryList}}
+						<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
+						<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
+						<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
+							White</button>
+						<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
+						<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
+						<button class="beer-tag red selectable" onclick="filterSelectedStyles('red')">Red Beer</button>
+						<button class="beer-tag lambic selectable" onclick="filterSelectedStyles('lambic')"> Lambic</button>
+						<button class="beer-tag bock selectable" onclick="filterSelectedStyles('bock')"> Bock</button>
+						<button class="beer-tag strong selectable" onclick="filterSelectedStyles('strong')"> Strong Ale</button>
+						<button class="beer-tag selectable" style="background-color: darkgrey;"
+							onclick="filterSelectedStyles('show-all')">すべて表示</button>
+					</h3>
+					<article class="post">
+
+
+						<div v-for="(item, index) in beerList">
+							<div @click="changeView(index)">
+								{{ item.title }}
+							</div>
+						</div>
+						<div v-for="item in beerList">
+							<div v-show="item.view">
+								<div class="beer-title-wrapper">
+									<titles class="beer-title">{{item.name}}</titles>
+									<button class="beer-tag" :class="item.category">{{item.category}}</button>
+									<span class="beer-purchase">
+										購入場所：<a :href="item.link" target=”_blank”>{{item.shopName}}</a>
+									</span>
+								</div>
+								<div class="beer-description-wrapper">
+									<img :src="`images/banners/${item.imageName}`" alt="" class="beer-image" />
+									<div class="beer-chart-wrapper">
+										<!-- びあへるんヴァイツェンのグラフ -->
+										<canvas class='beer-chart-canvas' id="helnWeiz"></canvas>
+									</div>
+									<div class="beer-description">
+										<p class="beer-description-title">
+											{{item.title}}
+										</p>
+										<p class="beer-description-text" v-text="item.description">
+										</p>
+										<p class="beer-food">
+											おすすめのおつまみ：<BR>
+											{{item.food}}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div v-if="view" @click="changeView">
+
+
+
+						</div>
+
+						<!-- !footer -->
+						<footer id="footer">
+							<div class="inner">
+								<section class="gridWrapper">
+									<article class="grid">
+										<p class="logo"><a href="index.html" title="びあふぇす！" rel="home">VIRTUAL BEER FESTIVAL
+												2021<br /><span>No Beer&Music,No life.</span></a></p>
+									</article>
+									<article class="grid">
+										<p class="tel"><span>　</span></p>
+										<p class="open">　</p>
+									</article>
+									<article class="grid copyright">
+										Copyright(c) VIRTUAL BEER FESTIVAL 2021 team All Rights Reserved.</a>
+									</article>
+								</section>
+							</div>
+						</footer>
+
+	</body>
+
+</html>
+
+<script>
+
+</script>
+
+<p>{{ count }}</p>
+<p>{{ plusOne }}</p>
+<button @click="changeView">increment</button>
+</div>
+<!-- ! びあへるんヴァイツェン -->
+
+<script type="module">
+	import { createApp } from 'https://unpkg.com/petite-vue?module'
+	createApp({
+		// exposed to all expressions
+		count: 0,
+		beerList: [{
+			name: "キャスティール・バリスタ チョコレート",
+			category: "strongDark",
+			shopName: "BELGIAN BEER JAPAN",
+			link: "https://www.belgianbeer.co.jp/products/detail.php?product_id=221",
+			title: "驚くほどにチョコレート",
+			description: `厚みのある濃厚な口当たりと飲みやすいまろやかな香り
+		まるでチョコレートを飲んでいるかのようなベルギーの特別なビールです
+		今まで飲んでみたチョコレートビールはチョコの香りがしなかった？
+		キャスティールバリスタ・チョコレートはそんなあなたも満足させるような
+		しっかりとチョコレートのような香りを感じさせる一杯です。`
+			,
+			food: "ナッツ、生チョコ、レバーパテなど",
+			view: true,
+			imageName:"casteel.jpg"
+		},
+		{ title: "ビアまるん",category: "strongDark", view: true },
+		{ title: "ビアこるん",category: "strongAle", view: true }
+	],
+		filters: [],
+		// getters
+		get plusOne() {
+			return this.count + 1
+		},
+		// beerListのCategoryから重複を取り除く処理
+		get categoryList(){
+			return this.beerList.filter((item, index, self) =>{
+				return self.findIndex(e => e.category === item.category) === index;
+			}).map((filteredItem)=> filteredItem.category)
+		},
+		// methods
+		increment() {
+			this.count++
+		},
+		changeView(index) {
+			console.log(index);
+			this.beerList[index].view = !this.beerList[index].view
+		},
+		mounted() {
+			console.log(`I'm mounted!`)
+		},
+	}).mount()
+	const canvasIds = ["helnWeiz"] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
+	// 各ビールのグラフデータ
+	const beerData = {
+		datasets: [
+			{
+				label: "Kasteel Barista Chocolate Quad",
+				data: [1, 6, 5, 2, 6, 7],　// パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+				borderColor: "#94933B"
+			},
+		],
+	};
+	// チャートを生成する処理
+	const createNewChart = (canvasId, datasets) => {
+		const ctx = document.getElementById(canvasId);
+		const radarCharts = new Chart(ctx, {
+			type: "radar",
+			data: {
+				labels: ["ホップ感", "甘味", "苦み", "キレ", "酸味", "ボディ"], // Ｘ軸のラベル
+				datasets: datasets
+			},
+			options: {
+				scale: {
+					ticks: {
+						suggestedMin: 0, //グラフの最小表示値
+						suggestedMax: 10, //グラフの最大表示値
+						// fontSize: 16, // 目盛り数字の大きさ
+						stepSize: 2 //目盛の間隔
+					},
+				},
+				maintainAspectRatio: false,
+				legend: {
+					display: false // 凡例の表示
+				},
+			},
+		});
+	}
+	// ここで処理を実行する（canvasIdsの中身の数分だけチャートが生成される）
+	for (let index = 0; index < canvasIds.length; index++) {
+		createNewChart(canvasIds[index], [beerData.datasets[index]])
+	}
+
+	// スタイルのID一覧
+	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic", "bock", "strong"]
+	// スタイル絞り込みボタンをクリックした際の処理
+	const filterSelectedStyles = (style) => {
+		if (style === "show-all") {
+			for (let index2 = 0; index2 < styleList.length; index2++) {
+				document.getElementById(styleList[index2]).style.display = "block"
+			}
+		} else {
+			const element = document.getElementById(style);
+			element.style.display = "block";
+			for (let index = 0; index < styleList.length; index++) {
+				if (style != styleList[index]) {
+					document.getElementById(styleList[index]).style.display = "none"
+				}
+			}
+		}
+	}
+</script>

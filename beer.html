@@ -14,7 +14,6 @@
 	<script src="js/html5.js"></script>
 	<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
-	<script src="js/jquery1.4.4.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 </head>
@@ -24,7 +23,8 @@
 	<header id="header" role="banner">
 		<div class="inner">
 			<div class="logo">
-				<a href="index.html" title="VIRTUAL BEER FESTIVAL 2021" rel="home">VIRTUAL BEER FESTIVAL 2021<br /><span>No
+				<a href="index.html" title="VIRTUAL BEER FESTIVAL 2021" rel="home">VIRTUAL BEER FESTIVAL
+					2021<br /><span>No
 						Beer&Music,No life.</span></a>
 				<h1>VRC内開催ビアフェス開催概要です</h1>
 			</div>
@@ -50,182 +50,148 @@
 			<section class="content">
 				<h3 class="heading">
 					<div>
-					<button class="beer-tab" onclick="filterSelectedStyles('show-all')">おすすめビール</button>
-					<button class="beer-tab" onclick="location.href='shops.html'">ビールが買えるお店</button>
-				</div>
+						<button class="beer-tab" onclick="filterSelectedStyles('show-all')">おすすめビール</button>
+						<button class="beer-tab" onclick="location.href='shops.html'">ビールが買えるお店</button>
+					</div>
 					<!-- !絞り込みボタン -->
 					<button class="beer-tag ipa selectable" onclick="filterSelectedStyles('ipa')">IPA</button>
-					<button class="beer-tag pilsner selectable" onclick="filterSelectedStyles('pilsner')">Pilsner</button>
+					<button class="beer-tag pilsner selectable"
+						onclick="filterSelectedStyles('pilsner')">Pilsner</button>
 					<button class="beer-tag belgian-white selectable" onclick="filterSelectedStyles('b-white')">Belgian
 						White</button>
-					<button class="beer-tag stout selectable" onclick="filterSelectedStyles('stout')">Stout</button>
+					<button class="beer-tag black selectable" onclick="filterSelectedStyles('black')">Black</button>
 					<button class="beer-tag weizen selectable" onclick="filterSelectedStyles('weizen')">Weizen</button>
 					<button class="beer-tag red selectable" onclick="filterSelectedStyles('red')">Red Beer</button>
+					<button class="beer-tag special selectable" onclick="filterSelectedStyles('special')">Special
+						Beer</button>
 					<button class="beer-tag lambic selectable" onclick="filterSelectedStyles('lambic')"> Lambic</button>
 					<button class="beer-tag bock selectable" onclick="filterSelectedStyles('bock')"> Bock</button>
-					<button class="beer-tag strong selectable" onclick="filterSelectedStyles('strong')"> Strong Ale</button>
-					<button class="beer-tag selectable" style="background-color: darkgrey;"
-						onclick="filterSelectedStyles('show-all')">すべて表示</button>
+					<button class="beer-tag strong selectable" onclick="filterSelectedStyles('strong')"> Strong, Golden
+						<button class="beer-tag pale-ale selectable" onclick="filterSelectedStyles('paleale')"> PaleAle
+							Ale</button>
+						<button class="beer-tag selectable" style="background-color: darkgrey;"
+							onclick="filterSelectedStyles('show-all')">すべて表示</button>
 				</h3>
 				<article class="post">
-
-
-					<div id="weizen">
-						<!-- ! びあへるんヴァイツェン -->
+					<div id="paleale">
+						<!-- ! よなよなエール -->
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">松江ビアへるん　ヴァイツェン</titles>
-							<button class="beer-tag weizen">Weizen</button>
-							<button class="official">公式インタビュー</button>
+							<titles class="beer-title">よなよなエール</titles>
+							<button class="beer-tag pale-ale">Pale Ale</button>
 							<span class="beer-purchase">
-								購入場所：<a href="http://shimanebeerh.free.makeshop.jp/" target=”_blank”>松江地ビールビアへるん オンラインショップ</a>
+								購入場所：<a href="https://yonasato.com/ec/product/yonayona_ale"
+									target=”_blank”>よなよなエール公式ウェブサイト</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/heln_weiz.png" alt="" class="beer-image" />
+							<img src="images/banners/yonayona.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!-- びあへるんヴァイツェンのグラフ -->
-								<canvas class='beer-chart-canvas' id="helnWeiz"></canvas>
+								<!-- よなよなエールのグラフ -->
+								<canvas class='beer-chart-canvas' id="yonayona"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									バナナフルーティ！日本一濃厚を目指す小麦ビール<BR>『松江ビアへるん　ヴァイツェン』
+									王道ペールエールを追求したアメリカンペールエール
 								</p>
 								<p class="beer-description-text">
-									アゴ出汁や濃厚な醤油を使う「しまね県」の食にあわせて造り上げた香り濃厚！味わい濃厚なヴァイツェン。<BR>
-									ビールの香りの中にフェノールという醤油に必ず含まれる香り成分があり醤油との相性が良いので和食におすすめのビールです。<BR>
-									ドイツ発祥の黄白色の小麦ビール。<BR>
-									小麦麦芽ならではのフルーティな薫りと
-									クリーミーな泡立ちが特徴。
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
-									おすすめのおつまみ：<BR>特に西日本の濃厚な醤油との相性がよく、<BR>刺し身（甘濃い刺し身醤油）、サバ味噌煮もおすすめ。<BR>
-									またドイツ系ビールなので、ポテト、チーズ、ソーセージは鉄板。
+									おすすめのおつまみ：<BR>
+									照り焼きチキン <BR>
+									チェダーチーズ <BR>
+									酢豚 <BR>
 								</p>
 							</div>
 						</div>
-						<!-- !プランク・ヘフェヴァイツェン -->
+					</div>
+
+					<div id="weizen">
+						<!-- !ホフブロイヘーフェヴァイツェン -->
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">プランク・ヘフェヴァイツェン</titles>
+							<titles class="beer-title">ホフブロイヘーフェヴァイツェン</titles>
 							<button class="beer-tag weizen">Weizen</button>
-							<button class="official">公式インタビュー</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://kobatsu.thebase.in/" target=”_blank”>KOBATSUトレーディング</a>
+								購入場所：<a href="https://www.yodobashi.com/product/100000001004773591/"
+									target=”_blank”>yodobashi.com</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/plank_hefe.png" alt="" class="beer-image" />
+							<img src="images/banners/hofb.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!--プランク・ヘフェヴァイツェンのグラフ -->
-								<canvas class='beer-chart-canvas' id="plankHefe"></canvas>
+								<!--ホフブロイヘーフェヴァイツェンのグラフ -->
+								<canvas class='beer-chart-canvas' id="hofbrauHefe"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									世界チャンピオンのフラッグシップビール<BR>『Plank Hefeweizen』
+									王室御用達の白ビール。<BR>『Hofbrau Hefe Weizen』
 								</p>
 								<p class="beer-description-text">
-									1617年創業以来16代長男が世襲する家族経営醸造所の伝統のフラッグシップビール。<BR>
-									やや褐色で甘みを抑えた小麦ビール。<BR>
-									ワールドビアカップ金賞1回、銀賞2回、銅賞1回受賞。<BR>
-									これぞ「バイエルン！」と思わせてくれるヴァイツェン。
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：<BR>ヴァイスヴルスト、プレッツェル　シーザーサラダにもぴったりです。
 								</p>
 							</div>
 						</div>
-						<!-- !プランク・ヘラーヴァイツェンボック -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">プランク・ヘラーヴァイツェンボック</titles>
-							<button class="beer-tag weizen">Weizen</button>
-							<button class="official">公式インタビュー</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://kobatsu.thebase.in/" target=”_blank”>KOBATSUトレーディング</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/heller.png" alt="" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<!--プランク・ヘラーヴァイツェンボックのグラフ -->
-								<canvas class='beer-chart-canvas' id="plankHeller"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									ワールドビアカップ金賞５回受賞ビール<BR>『Plank Heller Weizenbock』
-								</p>
-								<p class="beer-description-text">
-									世界で最も権威あるビールのコンペティション「ワールドビアカップ」で金賞5回、銀賞1回、銅賞2回の「最強小麦ビール」。<BR>
-									麦の甘みを全面に感じるフルボディ。<BR>
-									料理にもスイーツにも合わせたい優雅な気持ちにさせてくれるビール。
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：<BR>ラムチョップ、野菜のグリルなど。<BR>
-									ステーキと付け合わせのグリルブロッコリーなども良く合います。
-								</p>
-							</div>
-						</div>
-
 					</div>
 
 
-					<div id="stout">
-						<!-- ! びあへるんスタウト -->
+					<div id="black">
+						<!-- ! 東京ブラック -->
 						<div id="weizen">
 							<div class="beer-title-wrapper">
-								<titles class="beer-title">松江ビアへるん　縁結麦酒スタウト</titles>
-								<button class="beer-tag stout">Stout</button>
-								<button class="official">公式インタビュー</button>
+								<titles class="beer-title">東京ブラック</titles>
+								<button class="beer-tag black">Black</button>
 								<span class="beer-purchase">
-									購入場所：<a href="http://shimanebeerh.free.makeshop.jp/" target=”_blank”>松江地ビールビアへるん オンラインショップ</a>
+									購入場所：<a href="https://yonasato.com/ec/product/yonayona_ale"
+										target=”_blank”>よなよなエール公式ウェブサイト</a>
 								</span>
 							</div>
 							<div class="beer-description-wrapper">
-								<img src="images/banners/helnStout.png" alt="" class="beer-image" />
+								<img src="images/banners/tokyob.png" alt="" class="beer-image" />
 								<div class="beer-chart-wrapper">
-									<!-- パンクIPAのグラフ -->
-									<canvas class='beer-chart-canvas' id="helnStout"></canvas>
+									<!-- 東京ブラックのグラフ -->
+									<canvas class='beer-chart-canvas' id="tokyob"></canvas>
 								</div>
 								<div class="beer-description">
 									<p class="beer-description-title">
-										苦くない！焙煎マイルド黒ビール！これが縁で結ばれた人も<BR>『松江ビアへるん　縁結麦酒スタウト』
+										本場イギリスで飲むような黒ビール<BR>『東京ブラック』
 									</p>
 									<p class="beer-description-text">
-										日本の晩酌！家庭の晩御飯に合う黒ビールを目指して造りました。<BR>
-										アイルランド伝統のミルクスタウト製法で大手黒ビールにはない、おどろくほどマイルドな黒ビールです。<BR>
-										大手の黒ビールは飲めないけど、こちらは好きというファンが多いです。<BR>
+										ここに説明を記載
 									</p>
 									<p class="beer-food">
-										おすすめのおつまみ：<BR>焙煎の香りは実は醤油と共通する香り！肉じゃが、豚角煮もいけます！<BR>
-										黒い色は焦がした麦を使っているからなので、香ばしいスモークナッツやベーコンなどの燻製モノが鉄板。
+										おすすめのおつまみ：
+										<BR>かきフライ
+										<BR>ローストビーフ
+										<BR>バニラアイス
 									</p>
 								</div>
 							</div>
 						</div>
-						<!-- ! インペリアルチョコレートスタウト -->
+						<!-- ! ベルヘイブンスコティッシュオートスタウト -->
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">インペリアルチョコレートスタウト</titles>
-							<button class="beer-tag stout">Stout</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
+							<titles class="beer-title">ベルヘイブンスコティッシュオートスタウト</titles>
+							<button class="beer-tag black">Black</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.sanktgallenbrewery.com/valentine/order/" target=”_blank”>サンクトガーレンオンラインストア</a>
+								購入場所：<a href="https://item.rakuten.co.jp/yamaya-shop/5010549306155/"
+									target=”_blank”>お酒のやまや 楽天市場店</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/chocostout.png" alt="インペリアルチョコレートスタウトの写真" class="beer-image" />
+							<img src="images/banners/belh.png" alt="ベルヘイブンスコティッシュオートスタウトの写真" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="sankt-stout"></canvas>
+								<canvas class='beer-chart-canvas' id="belhaven"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
 									泡まで真っ黒！特濃ビターチョコ風味
 									<br>
-									『インペリアルチョコレートスタウト』
+									『BELHAVEN SCOTTISH OAT STOUT』
 								</p>
 								<p class="beer-description-text">
-									毎年バレンタインに大人気のインペリアルチョコレートスタウト<Br>
-									通常の黒ビールの3倍もの原材料を使用しているので、濃厚な1杯に仕上がっています。<Br>
-									インペリアルスタウトの名にふさわしい重厚感のある味わいと深みのある微かな甘みがあなたを満足させてくれること間違いなし。<Br>
-									原材料にチョコレートは入っていませんが、まるでチョコレートが入っているかのような華やかな香りが感じられます。
-									アルコールも9％と高く、ワインのように2年間熟成可能です。<Br>
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：チーズ、チョコレート、ドライフルーツなど
@@ -234,133 +200,28 @@
 						</div>
 					</div>
 
-					<div id="ipa">
-						<!-- ! クルーリパブリック・ドランクンセイラー -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">クルーリパブリック・ドランクンセイラー</titles>
-							<button class="beer-tag ipa">IPA</button>
-							<button class="official">公式インタビュー</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://kobatsu.thebase.in/" target=”_blank”>KOBATSUトレーディング</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/sailor.png" alt="" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<!-- クルーリパブリック・ドランクンセイラーのグラフ -->
-								<canvas class='beer-chart-canvas' id="sailor"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									ワールドビアアワード2021 BEST IPA<BR>『CREW Republic DRUNKEN SAILOR』
-								</p>
-								<p class="beer-description-text">
-									世界的ビールコンペティション「ワールドビアアワード」2020年イングリッシュIPA部門でワールドBestに選ばれ、<BR>
-									更に6部門あるIPA部門の頂点「ワールドBEST IPA」に選ばれた。<BR>
-									ホップの苦味と麦の甘みが絶妙な「ドリンカブル」なIPA。
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：ステーキ、ハンバーガーなど
-								</p>
-							</div>
-						</div>
-						<!-- ! クルーリパブリック・ホップジャンキー -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">クルーリパブリック・ホップジャンキー</titles>
-							<button class="beer-tag ipa">IPA</button>
-							<button class="official">公式インタビュー</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://kobatsu.thebase.in/" target=”_blank”>KOBATSUトレーディング</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/junkie.png" alt="" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<!-- クルーリパブリック・ホップジャンキーのグラフ -->
-								<canvas class='beer-chart-canvas' id="junkie"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									まさに中毒になっちゃうセッションIPA<BR>『CREW Republic HOP JUNKIE』
-								</p>
-								<p class="beer-description-text">
-									アルコール3．4％と軽快ながらもガツンとしたホップの香りは<BR>マスカットを彷彿させる爽やかさ。<BR><BR>
-									何杯もガブガブ飲めてしまう中毒性からこの名前が付けられた<BR>ヤバいセッションIPA。<BR><BR>
-									ワールドビアアワード2020ドイツCOUNTRY WINNER
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：レモンを絞ったタコスや、ブラートヴルストなど
-								</p>
-							</div>
-						</div>
-						<!-- ! パンクIPA -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">PUNK IPA</titles>
-							<button class="beer-tag ipa">IPA</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
-							<span class="beer-purchase">
-								購入場所：<a
-									href="https://www.amazon.co.jp/dp/B073CZQWRS/ref=cm_sw_r_tw_dp_45HFH5J9CBY3QAEZZM9H?_encoding=UTF8&psc=1"
-									target=”_blank”>アマゾン</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/punkipa.png" alt="" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<!-- パンクIPAのグラフ -->
-								<canvas class='beer-chart-canvas' id="punkIPA"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									英国No.1クラフトビール『パンク IPA』
-								</p>
-								<p class="beer-description-text">
-									透明感のあるゴールデンカラー。ホップ由来のトロピカルやグレープフルーツのアロマが華やかに香ります。<BR>
-									大量のホップを贅沢に使い、手間を惜しまずホップのアロマを最大限に引き出しています。<br>
-									グラスに注ぐと透明感のあるクリアなゴールデンカラー。
-									<br>
-									香りはしっかりとした上質な麦芽、トロピカルフルーツ、そして何よりも ブリュードッグらしいグレープフルーツ香 が、 大量のホップ
-									とともに現れます。
-									<br>
-									ドライホッピングによる終わりの無い素晴らしい余韻へとつながります。<br>
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：ナッツ,ピクルスなど
-								</p>
-							</div>
-						</div>
-
-					</div>
-
-					<!-- ! ルル グランド10 -->
+					<!-- ! デリリュウム トレメンス -->
 					<div id="strong">
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">ルル グランド10</titles>
-							<button class="beer-tag strong">Strong Ale</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
+							<titles class="beer-title">デリリュウム トレメンス</titles>
+							<button class="beer-tag strong">Golden Ale</button>
 							<span class="beer-purchase">
-								購入場所：<a href="http://beeronline.jp/?pid=150982382" target=”_blank”>Beer Online.jp</a>
+								購入場所：<a href="https://www.belgianbeer.co.jp/products/detail.php?product_id=82"
+									target=”_blank”>BELGIAN BEER JAPAN</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/grande.png" alt="" class="beer-image" />
+							<img src="images/banners/delirium.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!-- ルル グランド10のグラフ -->
-								<canvas class='beer-chart-canvas' id="grande"></canvas>
+								<!-- デリリュウム トレメンスのグラフ -->
+								<canvas class='beer-chart-canvas' id="delirium"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									マニアも唸る激レアな逸品<BR>『La Rulles La Grande 10』
+									ラベルの像は幻覚？<BR>『Delirium Tremens』
 								</p>
 								<p class="beer-description-text">
-									ルル醸造所の10周年を記念されて誕生したビール<BR>
-									その完成度の高さと人気から世界に輸出されるようになりました。<br>
-									発酵の際に釜の上部を開放して発酵を行う製法で作られており、他にはない特別な味わいを感じられます。
-									<br>
-									洋ナシやリンゴのような華やかな香りと強いパンチが感じられますが、飲みにくいということはなく<br>
-									気が付くとグラスが空になっているようなビールです。<br>
-									ビール専門店でもめったにお目にかかれない激レアなビールです。<br>
-									生産年によって違った味わいがあるので、比較する楽しさもあります。
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：ラムチョップ、ポテトフリット、ムール貝のワイン蒸しなど。
@@ -369,35 +230,29 @@
 						</div>
 					</div>
 
-					<!-- ! ドゥシャス･デ･ブルゴーニュ -->
-					<div id="red">
+					<!-- ! ビーケン -->
+					<div id="special">
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">ドゥシャス･デ･ブルゴーニュ</titles>
-							<button class="beer-tag red">Red Beer</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
+							<titles class="beer-title">ビーケン</titles>
+							<button class="beer-tag special">Special Beer</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.belgianbeer.co.jp/products/detail.php?product_id=84" target=”_blank”>BELGIAN
+								購入場所：<a href="https://www.belgianbeer.co.jp/products/detail.php?product_id=95"
+									target=”_blank”>BELGIAN
 									BEER JAPAN</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/Duchesse.png" alt="" class="beer-image" />
+							<img src="images/banners/bieken.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!-- ドゥシャス･デ･ブルゴーニュのグラフ -->
-								<canvas class='beer-chart-canvas' id="duchesse"></canvas>
+								<!-- ビーケンのグラフ -->
+								<canvas class='beer-chart-canvas' id="bieken"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									オーク樽熟成させた伝統的なレッド・ビール<BR>『Duchesse de Bourgogne』
+									現在フランダース地方で造られる本物の蜂蜜ビール<BR>『BIEKEN』
 								</p>
 								<p class="beer-description-text">
-									オーク樽で18カ月間熟成したビールと、8カ月間熟成した若いビールとをブレンド<BR>
-									一口飲むとビールとは思えない爽やかな酸味とフルーツのような甘さ、樽の香りが広がります<br>
-									本場ベルギーならではの複雑な味わい。日本のビールではここまで複雑な風味を持つビールは殆どで会うことができません。
-									<br>
-									ビールの概念を覆す一杯です。
-									<br>
-									運が良ければ限定のチェリー味にも出会えるかもしれません。
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：ブルーチーズ、牛肉のビール煮などしっかりとした味の肉料理とよく合います。
@@ -406,241 +261,134 @@
 						</div>
 					</div>
 
-					<!-- ! リンデマンス・クリーク -->
+					<!-- ! ブーングース -->
 					<div id="lambic">
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">リンデマンス・クリーク</titles>
+							<titles class="beer-title">ブーングース</titles>
 							<button class="beer-tag lambic">Lambic</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.belgianbeer.co.jp/products/detail.php?product_id=656" target=”_blank”>BELGIAN
-									BEER JAPAN</a>
+								購入場所：<a href="https://item.rakuten.co.jp/sakenomori/10000406/"
+									target=”_blank”>リカープラザ藤井　楽天市場店</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/kriek.png" alt="" class="beer-image" />
+							<img src="images/banners/boon.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!-- リンデマンス・クリークのグラフ -->
-								<canvas class='beer-chart-canvas' id="kriek"></canvas>
+								<!-- ブーングースのグラフ -->
+								<canvas class='beer-chart-canvas' id="boon"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									自然発酵ビール　この味本当にビール！？<BR>『Lindemans Kriek』
+									自然発酵ビール　この味本当にビール！？<BR>『BOON GEUZE』
 								</p>
 								<p class="beer-description-text">
-									世界的にもとても珍しい自然発酵ビール<BR>
+									ここに説明を記載
+									<!-- 世界的にもとても珍しい自然発酵ビール<BR>
 									オーク樽で熟成されたランビックとチェリージュースから作られています。<br>
 									摘みたてのチェリーの爽やかな酸味とまるでジュースのような甘さ<br>
 									新鮮なチェリーの爽やかさの絶妙なバランスで飲む人を魅了します。<br>
 									グラスにたっぷりと氷を入れて楽しむロックスタイルも人気です。<br><br>
-									どうしてもビールが苦手というそこのあなた、甘いお酒が好きであれば必ず気に入るでしょう。
+									どうしてもビールが苦手というそこのあなた、甘いお酒が好きであれば必ず気に入るでしょう。 -->
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：ワッフル、ムール貝の白ワイン蒸し、エッグベネディクトなど
 								</p>
 							</div>
 						</div>
-					</div>
-
-
-					<!-- ! サミクラウス -->
-					<div id="bock">
+						<!-- ! リンデマンス・ペシェリーゼ -->
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">サミクラウス</titles>
-							<button class="beer-tag bock">Bock</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
+							<titles class="beer-title">リンデマンス・ペシェリーゼ</titles>
+							<button class="beer-tag lambic">Lambic</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.nipponbeer.jp/lineup/samichlaus-bier/" target=”_blank”>日本ビール株式会社</a>
+								購入場所：<a href="https://item.rakuten.co.jp/newyork001/461229/"
+									target=”_blank”>世界のお酒　ニューヨーク　楽天市場店</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/chlaus.png" alt="" class="beer-image" />
+							<img src="images/banners/linde.png" alt="" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<!-- サミクラウスのグラフ -->
-								<canvas class='beer-chart-canvas' id="chlaus"></canvas>
+								<!-- リンデマンス・ペシェリーゼ -->
+								<canvas class='beer-chart-canvas' id="linde"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									アルコール度数　驚異の14%<BR>
-									『Samichlaus Bier』
+									まるでピーチジュースのような飲みやすさ<BR>『Lindemans Pecheresse』
 								</p>
 								<p class="beer-description-text">
-									1年で聖ニコラウス（サンタクロース）の祝祭日に1度だけ醸造される限定ビール<BR>
-									ドッペルボックでありながら、アイスボック並のアルコール度数。<BR>
-									そのアルコール度数は驚異の14％<br>
-									下面発酵ビールとして世界一アルコール度数が高いビールとして過去ギネスブックに認定されたこともあります。<br>
-									10ヶ月の熟成を経てボトル詰めされるため<br>
-									超高アルコールの割にスムースで飲みやすく口に含むと芳醇な香りが脳まで広がります。<br>
-									ワインのように時間をかけて楽しみたい1杯です。
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
-									おすすめのおつまみ：<br>チョコレートなどのデザートや味の強い食べ物と相性抜群<br>
-									つまみなしでビールそのものだけでも十分に楽しめます。
+									おすすめのおつまみ：ワッフル、ムール貝の白ワイン蒸し、エッグベネディクトなど
 								</p>
 							</div>
 						</div>
+
 					</div>
 
+
+
 					<div id="pilsner">
-						<!-- ! COEDO 瑠璃 -->
+						<!-- ! ネパールアイス　プレミアム　ラガー -->
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">COEDO 瑠璃</titles>
+							<titles class="beer-title">ネパールアイス　プレミアム　ラガー</titles>
 							<button class="beer-tag pilsner">Pilsner</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://webshop-coedobrewery.com/" target=”_blank”>COEDO Online Shop</a>
+								購入場所：<a
+									href="https://www.amazon.co.jp/dp/B00M6WFZ28/ref=cm_sw_r_apan_i_1Y6NZ2FJVJZEDJV3ZAK4"
+									target=”_blank”>Amazon</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/koedo.png" alt="COEDO 瑠璃の写真" class="beer-image" />
+							<img src="images/banners/nepal.png" alt="Nepal Ice PREMIUM LAGER BEERの写真"
+								class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="ruri"></canvas>
+								<canvas class='beer-chart-canvas' id="nepal"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									小江戸川越で生まれたプレミアムピルスナー
-									『瑠璃』
-								</p>
-								<p class="beer-description-text">
-									軽やかな口当たりながらも、深みある味わいとホップの香味苦味のバランスをとった上質の大人の楽しみ。<br>
-									飽きがこず、どんなお食事にも合うビール<br>
-									軽やかな口当たりながらも、深みのある味わいとホップの香味苦味のバランスをとった上質な大人の楽しみ。<br>飽きがこず、どんなお食事にも合うビールです。
-									その透明感溢れる特徴にちなんで「瑠璃-Ruri-」と名付けられました。
-									<p class="beer-food">
-										おすすめのおつまみ：から揚げ、ソーセージ、ポテトフリットなど
-									</p>
-							</div>
-						</div>
-						<!-- ! ビアラオ -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">ビアラオ</titles>
-							<button class="beer-tag pilsner">Pilsner</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://laostore.jp/products/detail/120" target=”_blank”>LAOSTORE</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/beerlao.png" alt="beer laoの写真" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="lao"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									ラオスの手つかずの自然から
-									『Beer Lao』
+									美味しいヒマラヤの水から生まれたビール<br>
+									『Nepal Ice PREMIUM LAGER BEER』
 								</p>
 								<p class="beer-description-text">
 									滑らかなのど越しとコクのあるやわらかい甘さ。<br>
 									ラオスの大地が生んだお米、ベルギー産ホップ、ドイツ産麦芽から醸造<br>
 									そのクオリティは数々の品評会などでも評価されています。<br>
 									温暖な気候の国のビールということもあり、氷を入れて飲んでもすっきりしていておいしいです。<br>
-									<p class="beer-food">
-										おすすめのおつまみ：スッキリした味わいなのでエスニックな料理と非常に相性がいいです。
-										ガパオライス、フォー、フライドチキンなど
-									</p>
-							</div>
-						</div>
-						<!-- ! コロナ エキストラ -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">コロナ エキストラ</titles>
-							<button class="beer-tag pilsner">Pilsner</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
-							<span class="beer-purchase">
-								購入場所：<a
-									href="https://www.amazon.co.jp/s?rh=n%3A71588051%2Cp_4%3A%E3%82%B3%E3%83%AD%E3%83%8A&ref=bl_dp_s_web_71588051"
-									target=”_blank”>アマゾン</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/corona.png" alt="corona extraの写真" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="corona"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									日本の輸入ビール第1位
-									『Corona Extra』
+								<p class="beer-food">
+									おすすめのおつまみ：スッキリした味わいなのでエスニックな料理と非常に相性がいいです。
+									ガパオライス、フォー、フライドチキンなど
 								</p>
-								<p class="beer-description-text">
-									世界で最も飲まれているプレミアムメキシカンビール<br>
-									透明なボトルと目を引くボトルデザイン<br>
-									キンキンに冷やしてライムを刺して飲むのがスタイル<br>
-									ホップの苦みが弱く気が付くと1瓶空いてしまうようなビールです。。<br>
-									本場ではライムだけではなく塩をプラスして飲む楽しみ方もあるそうな
-									<p class="beer-food">
-										おすすめのおつまみ：ナチョスチップス、チリビーンズなど
-									</p>
 							</div>
 						</div>
 					</div>
 
 
-					<!-- ! クローネンブルグ1664ブラン -->
-					<div id="b-white">
+					<!-- ! シメイグリーン -->
+					<div id="trapist">
 						<div class="beer-title-wrapper">
-							<titles class="beer-title">クローネンブルグ1664ブラン</titles>
-							<button class="beer-tag belgian-white">Belgian White</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
+							<titles class="beer-title">シメイグリーン</titles>
+							<button class="beer-tag trapist">Trapist</button>
 							<span class="beer-purchase">
-								購入場所：<a href="https://www.amazon.co.jp/dp/B07YSVS4WQ/ref=cm_sw_r_tw_dp_tRsdGbJK30JHS"
-									target=”_blank”>アマゾン</a>
+								購入場所：<a href="https://www.yodobashi.com/product/100000001006730174/"
+									target=”_blank”>yodobashi.com</a>
 							</span>
 						</div>
 						<div class="beer-description-wrapper">
-							<img src="images/banners/1664.png" alt="クローネンブルグ1664ブランの写真" class="beer-image" />
+							<img src="images/banners/green.png" alt="シメイグリーンの写真" class="beer-image" />
 							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="branc"></canvas>
+								<canvas class='beer-chart-canvas' id="green"></canvas>
 							</div>
 							<div class="beer-description">
 								<p class="beer-description-title">
-									スパイスが爽やか香るフランスの白ビール
+									醸造１５０年の歴史の集大成
 									<br>
-									『クローネンブルグ1664ブラン』
+									『シメイグリーン』
 								</p>
 								<p class="beer-description-text">
-									オレンジピールとコリアンダーが香りの決め手<Br>
-									ほのかに甘い柑橘系の風味で、苦味が柔らかく飲みやすい白ビール。<Br>
-									<br>
-									柑橘系で苦みの少ない味わいのため、白ワインのように様々な料理とマリアージュをお楽しみいただけます。<Br>
-									ボトルデザインも洗練されており、是非コレクションの一つとしても並べておきたい一本です。<Br>
-									美食学、ファッション、芸術の国フランスならではの丹念に仕上げた豊かな味わい、是非この機会にいかがでしょう。<Br>
+									ここに説明を記載
 								</p>
 								<p class="beer-food">
 									おすすめのおつまみ：シーフード、サラダ、フルーツなど
-								</p>
-							</div>
-						</div>
-
-
-						<!-- ! 白濁り -->
-						<div class="beer-title-wrapper">
-							<titles class="beer-title">白濁</titles>
-							<button class="beer-tag belgian-white">Belgian White</button>
-							<button class="staff-recommendation">スタッフおすすめ</button>
-							<span class="beer-purchase">
-								購入場所：<a href="https://beerhouse.co.jp/shopdetail/000000000078" target=”_blank”>ビアハウスオンラインショップ</a>
-							</span>
-						</div>
-						<div class="beer-description-wrapper">
-							<img src="images/banners/shironigori.png" alt="白濁りの写真" class="beer-image" />
-							<div class="beer-chart-wrapper">
-								<canvas class='beer-chart-canvas' id="shironigori"></canvas>
-							</div>
-							<div class="beer-description">
-								<p class="beer-description-title">
-									逆さまの缶がインパクト大！
-									<br>
-									『白濁』
-								</p>
-								<p class="beer-description-text">
-									ベルジアンホワイトスタイルながらもスパイスを入れず、小麦本来の特徴を全面的に押し出しています。
-									スパイスを使用していないので、芳醇な味わいとほのかなフローラルの香りを感じられます。<Br>
-									和風なネーミングですが本場ベルギーで醸造された本格派白ビールです。<Br><Br>
-									スパイスが入っていない分、前に出過ぎない軽やかな味わいなので様々な料理と合わせることができます。
-								</p>
-								<p class="beer-food">
-									おすすめのおつまみ：ケーキ、ピリ辛チキン、ムニエルなど
 								</p>
 							</div>
 						</div>
@@ -670,97 +418,83 @@
 </html>
 
 <script>
-	const canvasIds = ["punkIPA", "ruri", "branc", "shironigori", "sankt-stout",
-		"helnWeiz", "helnStout", "duchesse", "kriek", "lao", "corona", "chlaus", "grande", "plankHefe", "plankHeller",
-		"sailor", "junkie"
+	const canvasIds = ["green", "belhaven",
+		"yonayona", "tokyob", "bieken", "boon", "nepal", "linde", "delirium", "hofbrauHefe",
+
 	] // グラフを認識するID<canvas id="ここの値をグラフ数に応じて入れる">
 	// 各ビールのグラフデータ
 	const beerData = {
 		datasets: [{
-				label: "パンクIPA", // グラフ名
-				data: [8, 3, 8, 8, 5, 4], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
-				borderColor: "#94933B" // 線の色
-			},
-			{
-				label: "瑠璃",
-				data: [4, 4, 5, 8, 4, 3],
-				borderColor: "#94933B"
-			},
-			{
-				label: "クローネンブルグ1664ブラン",
-				data: [3, 7, 3, 5, 6, 6],
-				borderColor: "#94933B"
-			},
-			{
-				label: "白濁",
-				data: [4, 6, 2, 3, 6, 7],
-				borderColor: "#94933B"
-			},
-			{
-				label: "インペリアルチョコレートスタウト",
-				data: [3, 3, 8, 2, 4, 9],
-				borderColor: "#94933B"
-			},
-			{
-				label: "松江ビアへるん　ヴァイツェン",
-				data: [1, 6, 2, 2, 5, 9],
-				borderColor: "#94933B"
-			},
-			{
-				label: "松江ビアへるん　縁結麦酒スタウト",
-				data: [2, 6, 2, 2, 2, 6],
-				borderColor: "#94933B"
-			},
-			{
-				label: "ドゥシャス デ ブルゴーニュ",
-				data: [1, 7, 3, 3, 8, 8], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
-				borderColor: "#94933B"
-			},
-			{
-				label: "リンデマンス・クリーク",
-				data: [1, 9, 2, 3, 8, 4],
-				borderColor: "#94933B"
-			},
-			{
-				label: "ビアラオ",
-				data: [3, 3, 4, 8, 3, 2],
-				borderColor: "#94933B"
-			},
-			{
-				label: "コロナエキストラ",
-				data: [1, 4, 4, 9, 4, 3],
-				borderColor: "#94933B"
-			},
-			{
-				label: "サミクラウス",
-				data: [7, 6, 7, 1, 5, 10],
-				borderColor: "#94933B"
-			},
-			{
-				label: "グランド10",
-				data: [7, 5, 8, 4, 3, 9],
-				borderColor: "#94933B"
-			},
-			{
-				label: "Plank Hefeweizen",
-				data: [3, 6, 1, 5, 5, 6],
-				borderColor: "#94933B"
-			},
-			{
-				label: "プランク・ヘラーヴァイツェンボック",
-				data: [3, 8, 1, 3, 5, 9],
-				borderColor: "#94933B"
-			},
-			{
-				label: "クルーリパブリック・ドランクンセイラー",
-				data: [10, 6, 8, 3, 2, 7],
-				borderColor: "#94933B"
-			},
-			{
-				label: "クルーリパブリック・ホップジャンキー",
-				data: [10, 3, 6, 6, 2, 3],
-				borderColor: "#94933B"
-			},
+			label: "よなよなエール", // グラフ名
+			data: [5, 5, 4, 4, 5, 6], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+			borderColor: "#fee407", // 線の色
+			fill: false,
+
+		},
+		{
+			label: "シメイグリーン",
+			data: [7, 7, 9, 5, 6, 7],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "ベルヘイブンスコティッシュオートスタウト",
+			data: [3, 5, 4, 2, 4, 8], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "よなよなエール", // グラフ名
+			data: [5, 5, 4, 4, 5, 6],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "ビーケン",
+			data: [3, 6, 6, 2, 3, 7], // パラメータの値　左からホップ感, 甘味, 苦み, キレ, 酸味, ボディ
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "ブーングース",
+			data: [1, 9, 2, 3, 8, 4],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "ネパールアイス　プレミアム　ラガー",
+			data: [3, 3, 4, 8, 3, 2],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "リンデマンス・ペシェリーゼ",
+			data: [1, 10, 2, 5, 7, 4],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "デリリュウム トレメンス",
+			data: [6, 5, 7, 4, 3, 7],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+		{
+			label: "ホフブロイヘーフェヴァイツェン",
+			data: [3, 6, 1, 5, 5, 6],
+			borderColor: "#fee407",
+			fill: false,
+
+		},
+
 		],
 	};
 	// チャートを生成する処理
@@ -785,6 +519,11 @@
 				legend: {
 					display: false // 凡例の表示
 				},
+				elements: {
+					line: {
+						borderWidth: 5
+					}
+				}
 			},
 		});
 	}
@@ -794,7 +533,7 @@
 	}
 
 	// スタイルのID一覧
-	const styleList = ["ipa", "pilsner", "b-white", "stout", "weizen", "red", "lambic", "bock", "strong"]
+	const styleList = ["ipa", "pilsner", "b-white", "black", "weizen", "red", "lambic", "bock", "strong", "paleale", "trapist", 'special']
 	// スタイル絞り込みボタンをクリックした際の処理
 	const filterSelectedStyles = (style) => {
 		if (style === "show-all") {
