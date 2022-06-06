@@ -72,6 +72,7 @@
 
 .beer-description-text {
   word-break: break-all;
+  white-space:pre-line;
 }
 
 .beer-food {
@@ -129,7 +130,14 @@
 
 .stout {
   background-color: #501d00;
+}
 
+.porter {
+  background-color: #501d00;
+}
+
+.black {
+  background-color: #501d00;
 }
 
 .weizen {
@@ -138,6 +146,14 @@
 
 .red {
   background-color: #7e2800;
+}
+
+.special {
+  background-color: #d55d25;
+}
+
+.pale-ale {
+  background-color: #c14b14;
 }
 
 .lambic {
@@ -150,6 +166,14 @@
 
 .strong {
   background-color: #c4a700;
+}
+
+.trapist {
+  background-color: #fff09d;
+}
+
+.strongDark {
+  background-color: #262e04;
 }
 
 .official {
